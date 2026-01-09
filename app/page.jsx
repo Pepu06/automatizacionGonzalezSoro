@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import DashboardButton from "@/app/components/DashboardButton";
 
 
 export default function Home() {
@@ -16,15 +17,15 @@ export default function Home() {
     "Acevedo",
     "Alsina 1138",
     "Alsina 1905",
-    "Aráoz",
+    "Araoz",
     "Artigas",
     "Austria",
     "Av la Plata",
     "Avellaneda",
     "Ayacucho 1085",
     "Ayacucho 331",
-    "Bernardo de Irigoyen",
-    "Beruti",
+    "Bernardo de Irigoy",
+    "Berutti",
     "Billinghurst",
     "Bulnes",
     "Cervantes",
@@ -35,7 +36,7 @@ export default function Home() {
     "Esmeralda 3 K",
     "Esmeralda 5 A",
     "Esmeralda 5 D",
-    "Eva Perón",
+    "Eva Peron",
     "Formosa 129",
     "Formosa 380",
     "G Lorca cochera 340",
@@ -46,7 +47,7 @@ export default function Home() {
     "Independencia",
     "La Rioja",
     "Lacarra",
-    "Lapida 1898",
+    "Laprida 1898",
     "Las Heras",
     "Lavalle",
     "Lavalleja",
@@ -64,7 +65,7 @@ export default function Home() {
     "Pilar dormi",
     "Pueyrredon 1655",
     "Pueyrredon 1978",
-    "Quimo Costa",
+    "Quirno Costa",
     "R Pena 10 C",
     "R Pena 10 D",
     "R Pena 2 B",
@@ -93,7 +94,7 @@ export default function Home() {
     "Valle",
     "Vidt 2052",
     "Vidt 2137",
-    "Yapeyú",
+    "Yapeyu",
     "Yatay",
   ];
 
@@ -166,6 +167,7 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 py-12 px-4">
+      <DashboardButton />
       <main className="w-full max-w-2xl bg-white rounded-lg shadow-sm p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Departamento */}

@@ -174,18 +174,6 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$stream__$5b$external$5d$__
 ;
 ;
 const ROOT_FOLDER_ID = "1Sa9TRwwCzVv2bqS21AQV79yBavsyPJ-s";
-const COLUMNAS = {
-    EDESUR: "B",
-    AYSA: "C",
-    METROGAS: "D",
-    ABL: "E",
-    EXPENSAS: "F",
-    TELECOM: "G",
-    YSAUC: "H",
-    ABLUC: "I",
-    MUNICIPAL: "J",
-    ARBA: "K"
-};
 const MESES = [
     "Enero",
     "Febrero",
@@ -200,35 +188,21 @@ const MESES = [
     "Noviembre",
     "Diciembre"
 ];
+// cada año ocupa 15 filas
 const FILA_INICIAL_POR_ANIO = {
-    2025: 15,
-    2026: 30,
-    2027: 45,
-    2028: 60,
-    2029: 75,
-    2030: 90
+    2025: 5,
+    2026: 20,
+    2027: 35,
+    2028: 50,
+    2029: 65,
+    2030: 80
 };
 function obtenerAnioDelImpuesto(mesSeleccionado) {
     const ahora = new Date();
     const anioActual = ahora.getFullYear();
     const mesActual = ahora.getMonth(); // 0 = enero
-    const meses = [
-        "Enero",
-        "Febrero",
-        "Marzo",
-        "Abril",
-        "Mayo",
-        "Junio",
-        "Julio",
-        "Agosto",
-        "Septiembre",
-        "Octubre",
-        "Noviembre",
-        "Diciembre"
-    ];
-    const indiceMes = meses.indexOf(mesSeleccionado);
+    const indiceMes = MESES.indexOf(mesSeleccionado);
     if (indiceMes === -1) return null;
-    // 👇 regla real
     return indiceMes > mesActual ? anioActual - 1 : anioActual;
 }
 function obtenerFila(anio, mes) {
@@ -266,20 +240,20 @@ async function POST(req) {
     try {
         const formData = await req.formData();
         const departamento = formData.get("departamento");
-        const impuesto = formData.get("impuesto");
+        const impuesto = formData.get("impuesto"); // nombre de la hoja
         const mes = formData.get("mes");
-        const importe = Number(formData.get("importe"));
-        const comprobante = formData.get("comprobante"); // File | null
+        const importeRaw = formData.get("importe");
+        const importe = parseFloat(importeRaw.replace(',', '.'));
+        const comprobante = formData.get("comprobante");
         const spreadsheetId = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$busca_id$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["obtenerSpreadsheetId"])(departamento);
-        const columna = COLUMNAS[impuesto];
         const anioImpuesto = obtenerAnioDelImpuesto(mes);
         const fila = obtenerFila(anioImpuesto, mes);
-        if (!spreadsheetId || !columna || !fila) {
+        if (!spreadsheetId || !impuesto || !fila) {
             return Response.json({
                 error: "Datos inválidos",
                 debug: {
                     spreadsheetId,
-                    columna,
+                    impuesto,
                     anioImpuesto,
                     fila
                 }
@@ -287,7 +261,8 @@ async function POST(req) {
                 status: 400
             });
         }
-        const celda = `'RESUMEN'!${columna}${fila}`;
+        // 👉 escribimos en la hoja del impuesto
+        const rango = `'${impuesto}'C${fila}`;
         const auth = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["google"].auth.OAuth2(process.env.GOOGLE_CLIENT_ID, process.env.GOOGLE_CLIENT_SECRET);
         auth.setCredentials({
             refresh_token: process.env.GOOGLE_REFRESH_TOKEN
@@ -302,7 +277,6 @@ async function POST(req) {
         });
         const departamentoFolderId = await obtenerOCrearCarpeta(drive, departamento, ROOT_FOLDER_ID);
         const impuestoFolderId = await obtenerOCrearCarpeta(drive, impuesto, departamentoFolderId);
-        const folderId = impuestoFolderId;
         if (comprobante) {
             const buffer = Buffer.from(await comprobante.arrayBuffer());
             const stream = __TURBOPACK__imported__module__$5b$externals$5d2f$stream__$5b$external$5d$__$28$stream$2c$__cjs$29$__["Readable"].from(buffer);
@@ -310,7 +284,7 @@ async function POST(req) {
                 requestBody: {
                     name: `${mes} - ${impuesto}.${comprobante.name.split(".").pop()}`,
                     parents: [
-                        folderId
+                        impuestoFolderId
                     ]
                 },
                 media: {
@@ -321,7 +295,7 @@ async function POST(req) {
         }
         await sheets.spreadsheets.values.update({
             spreadsheetId,
-            range: celda,
+            range: `'${impuesto}'!C${fila}`,
             valueInputOption: "USER_ENTERED",
             requestBody: {
                 values: [
@@ -333,7 +307,7 @@ async function POST(req) {
         });
         return Response.json({
             ok: true,
-            celda
+            rango
         });
     } catch (err) {
         console.error(err);

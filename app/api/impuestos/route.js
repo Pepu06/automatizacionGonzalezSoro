@@ -4,19 +4,6 @@ import { Readable } from "stream";
 
 const ROOT_FOLDER_ID = "1Sa9TRwwCzVv2bqS21AQV79yBavsyPJ-s";
 
-const COLUMNAS = {
-    EDESUR: "B",
-    AYSA: "C",
-    METROGAS: "D",
-    ABL: "E",
-    EXPENSAS: "F",
-    TELECOM: "G",
-    YSAUC: "H",
-    ABLUC: "I",
-    MUNICIPAL: "J",
-    ARBA: "K",
-};
-
 const MESES = [
     "Enero",
     "Febrero",
@@ -32,13 +19,14 @@ const MESES = [
     "Diciembre",
 ];
 
+// cada año ocupa 15 filas
 const FILA_INICIAL_POR_ANIO = {
-    2025: 15,
-    2026: 30,
-    2027: 45,
-    2028: 60,
-    2029: 75,
-    2030: 90,
+    2025: 5,
+    2026: 20,
+    2027: 35,
+    2028: 50,
+    2029: 65,
+    2030: 80,
 };
 
 function obtenerAnioDelImpuesto(mesSeleccionado) {
@@ -46,18 +34,10 @@ function obtenerAnioDelImpuesto(mesSeleccionado) {
     const anioActual = ahora.getFullYear();
     const mesActual = ahora.getMonth(); // 0 = enero
 
-    const meses = [
-        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
-    ];
-
-    const indiceMes = meses.indexOf(mesSeleccionado);
+    const indiceMes = MESES.indexOf(mesSeleccionado);
     if (indiceMes === -1) return null;
 
-    // 👇 regla real
-    return indiceMes > mesActual
-        ? anioActual - 1
-        : anioActual;
+    return indiceMes > mesActual ? anioActual - 1 : anioActual;
 }
 
 function obtenerFila(anio, mes) {
@@ -96,31 +76,31 @@ async function obtenerOCrearCarpeta(drive, nombre, parentId) {
     return folder.data.id;
 }
 
-
 export async function POST(req) {
     try {
         const formData = await req.formData();
 
         const departamento = formData.get("departamento");
-        const impuesto = formData.get("impuesto");
+        const impuesto = formData.get("impuesto"); // nombre de la hoja
         const mes = formData.get("mes");
-        const importe = Number(formData.get("importe"));
-        const comprobante = formData.get("comprobante"); // File | null
+        const importeRaw =formData.get("importe");
+        const importe = parseFloat(importeRaw.replace(',', '.'));
+        const comprobante = formData.get("comprobante");
 
         const spreadsheetId = await obtenerSpreadsheetId(departamento);
-        const columna = COLUMNAS[impuesto];
 
         const anioImpuesto = obtenerAnioDelImpuesto(mes);
         const fila = obtenerFila(anioImpuesto, mes);
 
-        if (!spreadsheetId || !columna || !fila) {
+        if (!spreadsheetId || !impuesto || !fila) {
             return Response.json(
-                { error: "Datos inválidos", debug: { spreadsheetId, columna, anioImpuesto, fila } },
+                { error: "Datos inválidos", debug: { spreadsheetId, impuesto, anioImpuesto, fila } },
                 { status: 400 }
             );
         }
 
-        const celda = `'RESUMEN'!${columna}${fila}`;
+        // 👉 escribimos en la hoja del impuesto
+        const rango = `'${impuesto}'C${fila}`;
 
         const auth = new google.auth.OAuth2(
             process.env.GOOGLE_CLIENT_ID,
@@ -146,8 +126,6 @@ export async function POST(req) {
             departamentoFolderId
         );
 
-        const folderId = impuestoFolderId;
-
         if (comprobante) {
             const buffer = Buffer.from(await comprobante.arrayBuffer());
             const stream = Readable.from(buffer);
@@ -155,26 +133,26 @@ export async function POST(req) {
             await drive.files.create({
                 requestBody: {
                     name: `${mes} - ${impuesto}.${comprobante.name.split(".").pop()}`,
-                    parents: [folderId],
+                    parents: [impuestoFolderId],
                 },
                 media: {
                     mimeType: comprobante.type,
                     body: stream,
                 },
             });
-
         }
 
         await sheets.spreadsheets.values.update({
             spreadsheetId,
-            range: celda,
+            range: `'${impuesto}'!C${fila}`,
             valueInputOption: "USER_ENTERED",
             requestBody: {
                 values: [[importe]],
             },
         });
 
-        return Response.json({ ok: true, celda });
+
+        return Response.json({ ok: true, rango });
     } catch (err) {
         console.error(err);
         return Response.json(
@@ -183,4 +161,3 @@ export async function POST(req) {
         );
     }
 }
-
