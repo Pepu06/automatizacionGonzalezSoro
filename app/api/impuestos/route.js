@@ -1,6 +1,7 @@
 import { google } from "googleapis";
 import { obtenerSpreadsheetId } from "../busca_id";
 import { Readable } from "stream";
+import { enviarMail } from "../lib/mailer";
 
 const ROOT_FOLDER_ID = "1Sa9TRwwCzVv2bqS21AQV79yBavsyPJ-s";
 
@@ -83,7 +84,7 @@ export async function POST(req) {
         const departamento = formData.get("departamento");
         const impuesto = formData.get("impuesto"); // nombre de la hoja
         const mes = formData.get("mes");
-        const importeRaw =formData.get("importe");
+        const importeRaw = formData.get("importe");
         const importe = parseFloat(importeRaw.replace(',', '.'));
         const comprobante = formData.get("comprobante");
 
@@ -126,6 +127,8 @@ export async function POST(req) {
             departamentoFolderId
         );
 
+        const carpetaUrl = `https://drive.google.com/drive/folders/${impuestoFolderId}`;
+
         if (comprobante) {
             const buffer = Buffer.from(await comprobante.arrayBuffer());
             const stream = Readable.from(buffer);
@@ -151,6 +154,23 @@ export async function POST(req) {
             },
         });
 
+        await enviarMail({
+            to: "mvcalvar@gmail.com",
+            subject: `📎 Comprobante cargado – ${departamento} / ${impuesto}`,
+            html: `
+                <h2>Nuevo comprobante cargado</h2>
+                <p><strong>Departamento:</strong> ${departamento}</p>
+                <p><strong>Impuesto:</strong> ${impuesto}</p>
+                <p><strong>Mes:</strong> ${mes}</p>
+                <p><strong>Monto:</strong> $${importe}</p>
+
+                <p>
+                👉 <a href="${carpetaUrl}" target="_blank">
+                    Ver carpeta del impuesto en Drive
+                </a>
+                </p>
+            `,
+        });
 
         return Response.json({ ok: true, rango });
     } catch (err) {

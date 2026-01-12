@@ -31,13 +31,6 @@ const IMPUESTOS = [
     "TELECOM",
 ];
 
-function esMesFuturo(mes) {
-    const ahora = new Date();
-    const mesActual = ahora.getMonth();
-    const indiceMes = MESES.indexOf(mes);
-    return indiceMes > mesActual;
-}
-
 export default function Dashboard() {
     const [resumen, setResumen] = useState(null);
     const [mesSeleccionado, setMesSeleccionado] = useState(MESES[new Date().getMonth()]);
@@ -71,11 +64,6 @@ export default function Dashboard() {
 
     const getColorEstado = (impuesto, departamento) => {
         const estado = getDepartamentoEstado(departamento, impuesto);
-        const mesFuturo = esMesFuturo(mesSeleccionado);
-
-        if (mesFuturo) {
-            return "bg-gray-100 text-gray-600";
-        }
 
         if (estado.pagado) {
             return "bg-green-400 text-white";
@@ -161,7 +149,6 @@ export default function Dashboard() {
                                                         departamento,
                                                         impuesto
                                                     );
-                                                    const mesFuturo = esMesFuturo(mesSeleccionado);
 
                                                     return (
                                                         <td
@@ -171,9 +158,7 @@ export default function Dashboard() {
                                                                 departamento
                                                             )}`}
                                                         >
-                                                            {mesFuturo ? (
-                                                                <span className="text-gray-500">-</span>
-                                                            ) : estado.pagado ? (
+                                                            {estado.pagado ? (
                                                                 <div>
                                                                     <div>✓</div>
                                                                     <div className="text-sm mt-1">

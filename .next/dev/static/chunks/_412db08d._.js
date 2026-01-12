@@ -40,12 +40,6 @@ const IMPUESTOS = [
     "MUNICIPAL",
     "TELECOM"
 ];
-function esMesFuturo(mes) {
-    const ahora = new Date();
-    const mesActual = ahora.getMonth();
-    const indiceMes = MESES.indexOf(mes);
-    return indiceMes > mesActual;
-}
 function Dashboard() {
     _s();
     const [resumen, setResumen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
@@ -88,10 +82,6 @@ function Dashboard() {
     };
     const getColorEstado = (impuesto, departamento)=>{
         const estado = getDepartamentoEstado(departamento, impuesto);
-        const mesFuturo = esMesFuturo(mesSeleccionado);
-        if (mesFuturo) {
-            return "bg-gray-100 text-gray-600";
-        }
         if (estado.pagado) {
             return "bg-green-400 text-white";
         } else {
@@ -111,12 +101,12 @@ function Dashboard() {
                         children: "← Volver"
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/page.jsx",
-                        lineNumber: 92,
+                        lineNumber: 80,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/dashboard/page.jsx",
-                    lineNumber: 91,
+                    lineNumber: 79,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -127,7 +117,7 @@ function Dashboard() {
                             children: "Resumen anual de Impuestos"
                         }, void 0, false, {
                             fileName: "[project]/app/dashboard/page.jsx",
-                            lineNumber: 102,
+                            lineNumber: 90,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -138,18 +128,18 @@ function Dashboard() {
                                     children: mes
                                 }, mes, false, {
                                     fileName: "[project]/app/dashboard/page.jsx",
-                                    lineNumber: 109,
+                                    lineNumber: 97,
                                     columnNumber: 29
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/dashboard/page.jsx",
-                            lineNumber: 107,
+                            lineNumber: 95,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/dashboard/page.jsx",
-                    lineNumber: 101,
+                    lineNumber: 89,
                     columnNumber: 17
                 }, this),
                 loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -159,12 +149,12 @@ function Dashboard() {
                         children: "Cargando datos..."
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/page.jsx",
-                        lineNumber: 126,
+                        lineNumber: 114,
                         columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/dashboard/page.jsx",
-                    lineNumber: 125,
+                    lineNumber: 113,
                     columnNumber: 21
                 }, this) : resumen && Object.keys(resumen.data || {}).length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "bg-white rounded-lg shadow overflow-hidden",
@@ -182,7 +172,7 @@ function Dashboard() {
                                                 children: "Departamento"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/page.jsx",
-                                                lineNumber: 134,
+                                                lineNumber: 122,
                                                 columnNumber: 41
                                             }, this),
                                             IMPUESTOS.map((impuesto)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -191,23 +181,23 @@ function Dashboard() {
                                                         children: impuesto
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dashboard/page.jsx",
-                                                        lineNumber: 142,
+                                                        lineNumber: 130,
                                                         columnNumber: 49
                                                     }, this)
                                                 }, impuesto, false, {
                                                     fileName: "[project]/app/dashboard/page.jsx",
-                                                    lineNumber: 138,
+                                                    lineNumber: 126,
                                                     columnNumber: 45
                                                 }, this))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/dashboard/page.jsx",
-                                        lineNumber: 133,
+                                        lineNumber: 121,
                                         columnNumber: 37
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/page.jsx",
-                                    lineNumber: 132,
+                                    lineNumber: 120,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -219,28 +209,20 @@ function Dashboard() {
                                                     children: departamento
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/page.jsx",
-                                                    lineNumber: 156,
+                                                    lineNumber: 144,
                                                     columnNumber: 49
                                                 }, this),
                                                 IMPUESTOS.map((impuesto)=>{
                                                     const estado = getDepartamentoEstado(departamento, impuesto);
-                                                    const mesFuturo = esMesFuturo(mesSeleccionado);
                                                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                         className: `px-4 py-4 text-center text-sm font-medium border-r ${getColorEstado(impuesto, departamento)}`,
-                                                        children: mesFuturo ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "text-gray-500",
-                                                            children: "-"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/dashboard/page.jsx",
-                                                            lineNumber: 175,
-                                                            columnNumber: 65
-                                                        }, this) : estado.pagado ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        children: estado.pagado ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     children: "✓"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/dashboard/page.jsx",
-                                                                    lineNumber: 178,
+                                                                    lineNumber: 163,
                                                                     columnNumber: 69
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -251,53 +233,53 @@ function Dashboard() {
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/dashboard/page.jsx",
-                                                                    lineNumber: 179,
+                                                                    lineNumber: 164,
                                                                     columnNumber: 69
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/dashboard/page.jsx",
-                                                            lineNumber: 177,
+                                                            lineNumber: 162,
                                                             columnNumber: 65
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "font-bold",
                                                             children: "✗"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/dashboard/page.jsx",
-                                                            lineNumber: 184,
+                                                            lineNumber: 169,
                                                             columnNumber: 65
                                                         }, this)
                                                     }, impuesto, false, {
                                                         fileName: "[project]/app/dashboard/page.jsx",
-                                                        lineNumber: 167,
+                                                        lineNumber: 154,
                                                         columnNumber: 57
                                                     }, this);
                                                 })
                                             ]
                                         }, departamento, true, {
                                             fileName: "[project]/app/dashboard/page.jsx",
-                                            lineNumber: 151,
+                                            lineNumber: 139,
                                             columnNumber: 45
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/page.jsx",
-                                    lineNumber: 147,
+                                    lineNumber: 135,
                                     columnNumber: 33
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dashboard/page.jsx",
-                            lineNumber: 131,
+                            lineNumber: 119,
                             columnNumber: 29
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/page.jsx",
-                        lineNumber: 130,
+                        lineNumber: 118,
                         columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/dashboard/page.jsx",
-                    lineNumber: 129,
+                    lineNumber: 117,
                     columnNumber: 21
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "bg-white rounded-lg shadow p-8 text-center",
@@ -306,12 +288,12 @@ function Dashboard() {
                         children: "No hay datos disponibles para este mes."
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/page.jsx",
-                        lineNumber: 197,
+                        lineNumber: 182,
                         columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/dashboard/page.jsx",
-                    lineNumber: 196,
+                    lineNumber: 181,
                     columnNumber: 21
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -322,7 +304,7 @@ function Dashboard() {
                             children: "Leyenda:"
                         }, void 0, false, {
                             fileName: "[project]/app/dashboard/page.jsx",
-                            lineNumber: 202,
+                            lineNumber: 187,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -335,7 +317,7 @@ function Dashboard() {
                                             className: "w-8 h-8 bg-green-400 rounded"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/page.jsx",
-                                            lineNumber: 205,
+                                            lineNumber: 190,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -345,20 +327,20 @@ function Dashboard() {
                                                     children: "Verde:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/page.jsx",
-                                                    lineNumber: 207,
+                                                    lineNumber: 192,
                                                     columnNumber: 33
                                                 }, this),
                                                 " Pagado"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/dashboard/page.jsx",
-                                            lineNumber: 206,
+                                            lineNumber: 191,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dashboard/page.jsx",
-                                    lineNumber: 204,
+                                    lineNumber: 189,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -368,7 +350,7 @@ function Dashboard() {
                                             className: "w-8 h-8 bg-red-400 rounded"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/page.jsx",
-                                            lineNumber: 211,
+                                            lineNumber: 196,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -378,20 +360,20 @@ function Dashboard() {
                                                     children: "Rojo:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/page.jsx",
-                                                    lineNumber: 213,
+                                                    lineNumber: 198,
                                                     columnNumber: 33
                                                 }, this),
                                                 " No pagado (mes pasado)"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/dashboard/page.jsx",
-                                            lineNumber: 212,
+                                            lineNumber: 197,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dashboard/page.jsx",
-                                    lineNumber: 210,
+                                    lineNumber: 195,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -401,7 +383,7 @@ function Dashboard() {
                                             className: "w-8 h-8 bg-gray-100 rounded"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/page.jsx",
-                                            lineNumber: 217,
+                                            lineNumber: 202,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -411,43 +393,43 @@ function Dashboard() {
                                                     children: "Gris:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/page.jsx",
-                                                    lineNumber: 219,
+                                                    lineNumber: 204,
                                                     columnNumber: 33
                                                 }, this),
                                                 " Mes futuro"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/dashboard/page.jsx",
-                                            lineNumber: 218,
+                                            lineNumber: 203,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dashboard/page.jsx",
-                                    lineNumber: 216,
+                                    lineNumber: 201,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dashboard/page.jsx",
-                            lineNumber: 203,
+                            lineNumber: 188,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/dashboard/page.jsx",
-                    lineNumber: 201,
+                    lineNumber: 186,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/dashboard/page.jsx",
-            lineNumber: 89,
+            lineNumber: 77,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/dashboard/page.jsx",
-        lineNumber: 88,
+        lineNumber: 76,
         columnNumber: 9
     }, this);
 }

@@ -305,6 +305,20 @@ async function POST(req) {
                 ]
             }
         });
+        await enviarMail({
+            to: "pedrogonzalezsoro@gmail.com",
+            subject: `Impuesto cargado: ${impuesto} – ${departamento}`,
+            html: `
+    <h2>📄 Nuevo impuesto cargado</h2>
+    <ul>
+      <li><strong>Departamento:</strong> ${departamento}</li>
+      <li><strong>Impuesto:</strong> ${impuesto}</li>
+      <li><strong>Mes:</strong> ${mes}</li>
+      <li><strong>Monto:</strong> $${importe}</li>
+    </ul>
+    <p>El comprobante ya fue guardado en Drive.</p>
+  `
+        });
         return Response.json({
             ok: true,
             rango

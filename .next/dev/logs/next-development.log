@@ -1,2 +1,2359 @@
-[00:00:00.932] Server  LOG     ✓ Ready in 704ms
-[00:00:05.456] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:00.665] Server  LOG     ✓ Ready in 491ms
+[00:00:04.270] Browser ERROR   {}
+[00:00:04.709] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:18.763] Server  ERROR   ⨯ ReferenceError: folderId is not defined
+[00:00:20.153] Browser ERROR   {}
+[00:07:15.656] Server  LOG     ✓ Compiled in 151ms
+[00:07:49.945] Server  LOG     ✓ Compiled in 139ms
+[00:07:50.128] Browser ERROR   uncaughtError: ReferenceError: SelectorDepartamento is not defined
+[00:07:50.753] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:07:50.874] Server  LOG     ✓ Compiled in 14ms
+[00:07:50.934] Server  ERROR   ⨯ ReferenceError: SelectorDepartamento is not defined
+[00:07:51.051] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:51.197] Browser ERROR   uncaughtError: ReferenceError: SelectorDepartamento is not defined
+[00:08:01.999] Server  LOG     ✓ Compiled in 404ms
+[00:08:02.022] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:02.023] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:02.335] Server  ERROR   ⨯ ReferenceError: DEPARTAMENTOS is not defined
+[00:08:02.447] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:02.572] Browser ERROR   uncaughtError: ReferenceError: DEPARTAMENTOS is not defined
+[00:08:11.271] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:11.271] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/page.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:08:11.272] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:11.338] Server  LOG     ✓ Compiled in 38ms
+[00:08:11.369] Server  ERROR   ⨯ ReferenceError: SelectorDepartamento is not defined
+[00:08:11.460] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:11.568] Browser ERROR   uncaughtError: ReferenceError: SelectorDepartamento is not defined
+[00:08:22.158] Server  LOG     ✓ Compiled in 53ms
+[00:08:22.169] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:22.170] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:22.417] Server  ERROR   ⨯ ReferenceError: DEPARTAMENTOS is not defined
+[00:08:22.501] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:22.623] Browser ERROR   uncaughtError: ReferenceError: DEPARTAMENTOS is not defined
+[00:08:31.895] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:31.895] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/components/Select.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:08:31.895] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:31.958] Server  LOG     ✓ Compiled in 14ms
+[00:08:32.096] Server  ERROR   ⨯ ReferenceError: departamentos is not defined
+[00:08:32.214] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:32.333] Browser ERROR   uncaughtError: ReferenceError: departamentos is not defined
+[00:08:55.156] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:55.156] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/page.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:08:55.156] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:55.175] Server  LOG     ✓ Compiled in 31ms
+[00:08:55.494] Server  ERROR   ⨯ ReferenceError: departamentos is not defined
+[00:08:55.635] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:55.770] Browser ERROR   uncaughtError: ReferenceError: departamentos is not defined
+[00:09:00.747] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:09:00.747] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/components/Select.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:09:00.748] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:09:00.834] Server  LOG     ✓ Compiled in 42ms
+[00:09:00.869] Server  ERROR   ⨯ ReferenceError: departamento is not defined
+[00:09:00.996] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:01.146] Browser ERROR   uncaughtError: ReferenceError: departamento is not defined
+[00:10:31.158] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:10:31.165] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:10:31.173] Server  LOG     ✓ Compiled in 54ms
+[00:10:31.288] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:10:31.450] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'useState')
+[00:10:31.582] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:31.778] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:12:07.196] Server  LOG     ✓ Compiled in 57ms
+[00:12:08.129] Browser ERROR   ./app/page.jsx:51:32
+Parsing ecmascript source code failed
+  49 |     const data = new FormData();
+  50 |     data.append("departamento", formData.departamento);
+> 51 |     data.append("departamento",.departamento);
+     |                                ^
+  52 |     data.append("impuesto", formData.impuesto);
+  53 |     data.append("mes", formData.mes);
+  54 |     data.append("importe", formData.importe);
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:12:10.945] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:10.945] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/page.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:12:10.946] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:10.969] Server  LOG     ✓ Compiled in 12ms
+[00:12:11.076] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:12:11.265] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'useState')
+[00:12:11.372] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:11.512] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:12:26.447] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:26.447] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/page.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:12:26.447] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:26.528] Server  LOG     ✓ Compiled in 23ms
+[00:12:26.560] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:12:26.673] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'useState')
+[00:12:26.797] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:26.918] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:12:36.183] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:36.183] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/page.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:12:36.184] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:36.243] Server  LOG     ✓ Compiled in 18ms
+[00:12:36.366] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:00.126] Server  ERROR   Error: No se encontró el spreadsheet del departamento
+[00:13:01.773] Browser ERROR   {}
+[00:16:59.527] Server  LOG     ✓ Compiled in 94ms
+[00:17:46.248] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.250] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.250] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.251] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.253] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.255] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.256] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.257] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.263] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.275] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.276] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.277] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.278] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.278] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.279] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.279] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.281] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.282] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.282] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.283] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.283] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.284] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.284] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.285] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.288] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.288] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.289] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.289] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.291] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.292] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.293] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.294] Server  ERROR   ⨯ ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:17:46.294] Server  LOG     ✓ Compiled in 367ms
+[00:17:47.128] Browser ERROR   ./app/page.jsx:5:1
+Module not found: Can't resolve '@/app/components/Select'
+  3 | import { useState } from "react";
+  4 | import DashboardButton from "@/app/components/DashboardButton";
+> 5 | import SelectorDepartamento from "@/app/components/Select";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 |
+  8 | export default function Home() {
+
+Import map: aliased to relative './app/components/Select' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:18:08.855] Server  LOG     ✓ Compiled in 113ms
+[00:21:14.456] Server  LOG     ✓ Compiled in 144ms
+[00:22:02.403] Server  LOG     ✓ Compiled in 31ms
+[00:22:03.129] Browser ERROR   uncaughtError: ReferenceError: meses is not defined
+[00:22:31.764] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:22:31.786] Server  LOG     ✓ Compiled in 31ms
+[00:22:32.030] Server  ERROR   ⨯ ReferenceError: SelectorMes is not defined
+[00:22:32.159] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:32.287] Browser ERROR   uncaughtError: ReferenceError: SelectorMes is not defined
+[00:22:33.503] Server  ERROR   ⨯ ReferenceError: SelectorMes is not defined
+[00:22:33.596] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:33.713] Browser ERROR   uncaughtError: ReferenceError: SelectorMes is not defined
+[00:22:39.678] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:22:39.753] Server  LOG     ✓ Compiled in 47ms
+[00:22:39.986] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:40.139] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+      <Home params={Promise} searchParams={Promise}>
+        <div className="flex min-h...">
+          <DashboardButton>
+          <main className="w-full max...">
+            <form onSubmit={function handleSubmit} className="space-y-6">
+              <div className="bg-gray-50...">
+                <label>
+                <SelectorDepartamento value="" onChange={function bound dispatchSetState}>
+                  <Select ref={null} options={[...]} placeholder="Buscar dep..." isClearable={true} isSearchable={true} ...>
+                    <SelectContainer clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                      <EmotionCssPropInternal css={{label:"con...", ...}} className="text-black" id={undefined} ...>
+                        <Insertion>
+                        <div className="text-black..." id={undefined} onKeyDown={function}>
+                          <LiveRegion clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                            <A11yText id="react-sele...">
+                              <EmotionCssPropInternal css={{name:"1f43...", ...}} id="react-sele..." ...>
+                                <Insertion>
+                                <span
++                                 id="react-select-3-live-region"
+-                                 id="react-select-2-live-region"
+                                  className="css-1f43avz-a11yText-A11yText"
+                                >
+                            ...
+                          ...
+                            <div className="css-hlgwow">
+                              <Placeholder clearValue={function} cx={function} getStyles={function} ...>
+                                <EmotionCssPropInternal css={{label:"pla...", ...}} className="" id="react-sele..." ...>
+                                  <Insertion>
+                                  <div
+                                    className="css-1jqq78o-placeholder"
++                                   id="react-select-3-placeholder"
+-                                   id="react-select-2-placeholder"
+                                  >
++                                   Buscar departamento…
+                              <Input clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                                <EmotionCssPropInternal css={{...}} className="" data-value="" ...>
+                                  <Insertion>
+                                  <div className="css-19bb58m" data-value="">
+                                    <input
+                                      className=""
+                                      ref={function}
+                                      style={{label:"input",color:"inherit",background:0,opacity:1,width:"100%",gridArea:"1 / 2",font:"inherit", ...}}
+                                      disabled={false}
+                                      autoCapitalize="none"
+                                      autoComplete="off"
+                                      autoCorrect="off"
++                                     id="react-select-3-input"
+-                                     id="react-select-2-input"
+                                      onBlur={function}
+                                      onChange={function}
+                                      onFocus={function}
+                                      spellCheck="false"
+                                      tabIndex={0}
+                                      form={undefined}
+                                      type="text"
+                                      value=""
+                                      aria-autocomplete="list"
+                                      aria-expanded={false}
+                                      aria-haspopup={true}
+                                      aria-errormessage={undefined}
+                                      aria-invalid={undefined}
+                                      aria-label={undefined}
+                                      aria-labelledby={undefined}
+                                      aria-required={undefined}
+                                      role="combobox"
+                                      aria-activedescendant=""
++                                     aria-describedby="react-select-3-placeholder"
+-                                     aria-describedby="react-select-2-placeholder"
+                                    >
+              <div className="bg-gray-50...">
+                <label>
+                <SelectorImpuesto value="" onChange={function bound dispatchSetState}>
+                  <Select ref={null} options={[...]} placeholder="Buscar imp..." isClearable={true} isSearchable={true} ...>
+                    <SelectContainer clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                      <EmotionCssPropInternal css={{label:"con...", ...}} className="text-black" id={undefined} ...>
+                        <Insertion>
+                        <div className="text-black..." id={undefined} onKeyDown={function}>
+                          <LiveRegion clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                            <A11yText id="react-sele...">
+                              <EmotionCssPropInternal css={{name:"1f43...", ...}} id="react-sele..." ...>
+                                <Insertion>
+                                <span
++                                 id="react-select-5-live-region"
+-                                 id="react-select-3-live-region"
+                                  className="css-1f43avz-a11yText-A11yText"
+                                >
+                            ...
+                          ...
+                            <div className="css-hlgwow">
+                              <Placeholder clearValue={function} cx={function} getStyles={function} ...>
+                                <EmotionCssPropInternal css={{label:"pla...", ...}} className="" id="react-sele..." ...>
+                                  <Insertion>
+                                  <div
+                                    className="css-1jqq78o-placeholder"
++                                   id="react-select-5-placeholder"
+-                                   id="react-select-3-placeholder"
+                                  >
++                                   Buscar impuesto...
+                              <Input clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                                <EmotionCssPropInternal css={{...}} className="" data-value="" ...>
+                                  <Insertion>
+                                  <div className="css-19bb58m" data-value="">
+                                    <input
+                                      className=""
+                                      ref={function}
+                                      style={{label:"input",color:"inherit",background:0,opacity:1,width:"100%",gridArea:"1 / 2",font:"inherit", ...}}
+                                      disabled={false}
+                                      autoCapitalize="none"
+                                      autoComplete="off"
+                                      autoCorrect="off"
++                                     id="react-select-5-input"
+-                                     id="react-select-3-input"
+                                      onBlur={function}
+                                      onChange={function}
+                                      onFocus={function}
+                                      spellCheck="false"
+                                      tabIndex={0}
+                                      form={undefined}
+                                      type="text"
+                                      value=""
+                                      aria-autocomplete="list"
+                                      aria-expanded={false}
+                                      aria-haspopup={true}
+                                      aria-errormessage={undefined}
+                                      aria-invalid={undefined}
+                                      aria-label={undefined}
+                                      aria-labelledby={undefined}
+                                      aria-required={undefined}
+                                      role="combobox"
+                                      aria-activedescendant=""
++                                     aria-describedby="react-select-5-placeholder"
+-                                     aria-describedby="react-select-3-placeholder"
+                                    >
+              <div className="bg-gray-50...">
+                <label>
+                <SelectorMes value="" onChange={function bound dispatchSetState}>
+                  <Select ref={null} options={[...]} placeholder="Buscar mes..." isClearable={true} isSearchable={true} ...>
+                    <SelectContainer clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                      <EmotionCssPropInternal css={{label:"con...", ...}} className="text-black" id={undefined} ...>
+                        <Insertion>
+                        <div className="text-black..." id={undefined} onKeyDown={function}>
+                          <LiveRegion clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                            <A11yText id="react-sele...">
+                              <EmotionCssPropInternal css={{name:"1f43...", ...}} id="react-sele..." ...>
+                                <Insertion>
+                                <span
++                                 id="react-select-7-live-region"
+-                                 id="react-select-4-live-region"
+                                  className="css-1f43avz-a11yText-A11yText"
+                                >
+                            ...
+                          ...
+                            <div className="css-hlgwow">
+                              <Placeholder clearValue={function} cx={function} getStyles={function} ...>
+                                <EmotionCssPropInternal css={{label:"pla...", ...}} className="" id="react-sele..." ...>
+                                  <Insertion>
+                                  <div
+                                    className="css-1jqq78o-placeholder"
++                                   id="react-select-7-placeholder"
+-                                   id="react-select-4-placeholder"
+                                  >
++                                   Buscar mes...
+                              <Input clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                                <EmotionCssPropInternal css={{...}} className="" data-value="" ...>
+                                  <Insertion>
+                                  <div className="css-19bb58m" data-value="">
+                                    <input
+                                      className=""
+                                      ref={function}
+                                      style={{label:"input",color:"inherit",background:0,opacity:1,width:"100%",gridArea:"1 / 2",font:"inherit", ...}}
+                                      disabled={false}
+                                      autoCapitalize="none"
+                                      autoComplete="off"
+                                      autoCorrect="off"
++                                     id="react-select-7-input"
+-                                     id="react-select-4-input"
+                                      onBlur={function}
+                                      onChange={function}
+                                      onFocus={function}
+                                      spellCheck="false"
+                                      tabIndex={0}
+                                      form={undefined}
+                                      type="text"
+                                      value=""
+                                      aria-autocomplete="list"
+                                      aria-expanded={false}
+                                      aria-haspopup={true}
+                                      aria-errormessage={undefined}
+                                      aria-invalid={undefined}
+                                      aria-label={undefined}
+                                      aria-labelledby={undefined}
+                                      aria-required={undefined}
+                                      role="combobox"
+                                      aria-activedescendant=""
++                                     aria-describedby="react-select-7-placeholder"
+-                                     aria-describedby="react-select-4-placeholder"
+                                    >
+              ...
+
+[00:25:04.233] Server  LOG     ✓ Compiled in 101ms
+[00:25:20.906] Server  LOG     ✓ Compiled in 21ms
+[00:25:56.458] Server  LOG     ✓ Compiled in 38ms
+[00:26:50.663] Server  LOG     ✓ Compiled in 28ms
+[00:26:51.128] Browser ERROR   uncaughtError: ReferenceError: departamento is not defined
+[00:27:33.855] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:27:33.872] Server  LOG     ✓ Compiled in 24ms
+[00:27:34.159] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:34.298] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+      <Home params={Promise} searchParams={Promise}>
+        <div className="flex min-h...">
+          <DashboardButton>
+          <main className="w-full max...">
+            <form onSubmit={function handleSubmit} className="space-y-6">
+              <div className="bg-gray-50...">
+                <label>
+                <SelectorDepartamento value="" onChange={function onChange}>
+                  <Select ref={null} options={[...]} placeholder="Buscar dep..." isClearable={true} isSearchable={true} ...>
+                    <SelectContainer clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                      <EmotionCssPropInternal css={{label:"con...", ...}} className="text-black" id={undefined} ...>
+                        <Insertion>
+                        <div className="text-black..." id={undefined} onKeyDown={function}>
+                          <LiveRegion clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                            <A11yText id="react-sele...">
+                              <EmotionCssPropInternal css={{name:"1f43...", ...}} id="react-sele..." ...>
+                                <Insertion>
+                                <span
++                                 id="react-select-3-live-region"
+-                                 id="react-select-2-live-region"
+                                  className="css-1f43avz-a11yText-A11yText"
+                                >
+                            ...
+                          ...
+                            <div className="css-hlgwow">
+                              <Placeholder clearValue={function} cx={function} getStyles={function} ...>
+                                <EmotionCssPropInternal css={{label:"pla...", ...}} className="" id="react-sele..." ...>
+                                  <Insertion>
+                                  <div
+                                    className="css-1jqq78o-placeholder"
++                                   id="react-select-3-placeholder"
+-                                   id="react-select-2-placeholder"
+                                  >
++                                   Buscar departamento…
+                              <Input clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                                <EmotionCssPropInternal css={{...}} className="" data-value="" ...>
+                                  <Insertion>
+                                  <div className="css-19bb58m" data-value="">
+                                    <input
+                                      className=""
+                                      ref={function}
+                                      style={{label:"input",color:"inherit",background:0,opacity:1,width:"100%",gridArea:"1 / 2",font:"inherit", ...}}
+                                      disabled={false}
+                                      autoCapitalize="none"
+                                      autoComplete="off"
+                                      autoCorrect="off"
++                                     id="react-select-3-input"
+-                                     id="react-select-2-input"
+                                      onBlur={function}
+                                      onChange={function}
+                                      onFocus={function}
+                                      spellCheck="false"
+                                      tabIndex={0}
+                                      form={undefined}
+                                      type="text"
+                                      value=""
+                                      aria-autocomplete="list"
+                                      aria-expanded={false}
+                                      aria-haspopup={true}
+                                      aria-errormessage={undefined}
+                                      aria-invalid={undefined}
+                                      aria-label={undefined}
+                                      aria-labelledby={undefined}
+                                      aria-required={undefined}
+                                      role="combobox"
+                                      aria-activedescendant=""
++                                     aria-describedby="react-select-3-placeholder"
+-                                     aria-describedby="react-select-2-placeholder"
+                                    >
+              <div className="bg-gray-50...">
+                <label>
+                <SelectorImpuesto value="" onChange={function onChange}>
+                  <Select ref={null} options={[...]} placeholder="Buscar imp..." isClearable={true} isSearchable={true} ...>
+                    <SelectContainer clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                      <EmotionCssPropInternal css={{label:"con...", ...}} className="text-black" id={undefined} ...>
+                        <Insertion>
+                        <div className="text-black..." id={undefined} onKeyDown={function}>
+                          <LiveRegion clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                            <A11yText id="react-sele...">
+                              <EmotionCssPropInternal css={{name:"1f43...", ...}} id="react-sele..." ...>
+                                <Insertion>
+                                <span
++                                 id="react-select-5-live-region"
+-                                 id="react-select-3-live-region"
+                                  className="css-1f43avz-a11yText-A11yText"
+                                >
+                            ...
+                          ...
+                            <div className="css-hlgwow">
+                              <Placeholder clearValue={function} cx={function} getStyles={function} ...>
+                                <EmotionCssPropInternal css={{label:"pla...", ...}} className="" id="react-sele..." ...>
+                                  <Insertion>
+                                  <div
+                                    className="css-1jqq78o-placeholder"
++                                   id="react-select-5-placeholder"
+-                                   id="react-select-3-placeholder"
+                                  >
++                                   Buscar impuesto...
+                              <Input clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                                <EmotionCssPropInternal css={{...}} className="" data-value="" ...>
+                                  <Insertion>
+                                  <div className="css-19bb58m" data-value="">
+                                    <input
+                                      className=""
+                                      ref={function}
+                                      style={{label:"input",color:"inherit",background:0,opacity:1,width:"100%",gridArea:"1 / 2",font:"inherit", ...}}
+                                      disabled={false}
+                                      autoCapitalize="none"
+                                      autoComplete="off"
+                                      autoCorrect="off"
++                                     id="react-select-5-input"
+-                                     id="react-select-3-input"
+                                      onBlur={function}
+                                      onChange={function}
+                                      onFocus={function}
+                                      spellCheck="false"
+                                      tabIndex={0}
+                                      form={undefined}
+                                      type="text"
+                                      value=""
+                                      aria-autocomplete="list"
+                                      aria-expanded={false}
+                                      aria-haspopup={true}
+                                      aria-errormessage={undefined}
+                                      aria-invalid={undefined}
+                                      aria-label={undefined}
+                                      aria-labelledby={undefined}
+                                      aria-required={undefined}
+                                      role="combobox"
+                                      aria-activedescendant=""
++                                     aria-describedby="react-select-5-placeholder"
+-                                     aria-describedby="react-select-3-placeholder"
+                                    >
+              <div className="bg-gray-50...">
+                <label>
+                <SelectorMes value="" onChange={function onChange}>
+                  <Select ref={null} options={[...]} placeholder="Buscar mes..." isClearable={true} isSearchable={true} ...>
+                    <SelectContainer clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                      <EmotionCssPropInternal css={{label:"con...", ...}} className="text-black" id={undefined} ...>
+                        <Insertion>
+                        <div className="text-black..." id={undefined} onKeyDown={function}>
+                          <LiveRegion clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                            <A11yText id="react-sele...">
+                              <EmotionCssPropInternal css={{name:"1f43...", ...}} id="react-sele..." ...>
+                                <Insertion>
+                                <span
++                                 id="react-select-7-live-region"
+-                                 id="react-select-4-live-region"
+                                  className="css-1f43avz-a11yText-A11yText"
+                                >
+                            ...
+                          ...
+                            <div className="css-hlgwow">
+                              <Placeholder clearValue={function} cx={function} getStyles={function} ...>
+                                <EmotionCssPropInternal css={{label:"pla...", ...}} className="" id="react-sele..." ...>
+                                  <Insertion>
+                                  <div
+                                    className="css-1jqq78o-placeholder"
++                                   id="react-select-7-placeholder"
+-                                   id="react-select-4-placeholder"
+                                  >
++                                   Buscar mes...
+                              <Input clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                                <EmotionCssPropInternal css={{...}} className="" data-value="" ...>
+                                  <Insertion>
+                                  <div className="css-19bb58m" data-value="">
+                                    <input
+                                      className=""
+                                      ref={function}
+                                      style={{label:"input",color:"inherit",background:0,opacity:1,width:"100%",gridArea:"1 / 2",font:"inherit", ...}}
+                                      disabled={false}
+                                      autoCapitalize="none"
+                                      autoComplete="off"
+                                      autoCorrect="off"
++                                     id="react-select-7-input"
+-                                     id="react-select-4-input"
+                                      onBlur={function}
+                                      onChange={function}
+                                      onFocus={function}
+                                      spellCheck="false"
+                                      tabIndex={0}
+                                      form={undefined}
+                                      type="text"
+                                      value=""
+                                      aria-autocomplete="list"
+                                      aria-expanded={false}
+                                      aria-haspopup={true}
+                                      aria-errormessage={undefined}
+                                      aria-invalid={undefined}
+                                      aria-label={undefined}
+                                      aria-labelledby={undefined}
+                                      aria-required={undefined}
+                                      role="combobox"
+                                      aria-activedescendant=""
++                                     aria-describedby="react-select-7-placeholder"
+-                                     aria-describedby="react-select-4-placeholder"
+                                    >
+              ...
+
+[00:27:41.345] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:41.461] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+      <Home params={Promise} searchParams={Promise}>
+        <div className="flex min-h...">
+          <DashboardButton>
+          <main className="w-full max...">
+            <form onSubmit={function handleSubmit} className="space-y-6">
+              <div className="bg-gray-50...">
+                <label>
+                <SelectorDepartamento value="" onChange={function onChange}>
+                  <Select ref={null} options={[...]} placeholder="Buscar dep..." isClearable={true} isSearchable={true} ...>
+                    <SelectContainer clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                      <EmotionCssPropInternal css={{label:"con...", ...}} className="text-black" id={undefined} ...>
+                        <Insertion>
+                        <div className="text-black..." id={undefined} onKeyDown={function}>
+                          <LiveRegion clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                            <A11yText id="react-sele...">
+                              <EmotionCssPropInternal css={{name:"1f43...", ...}} id="react-sele..." ...>
+                                <Insertion>
+                                <span
++                                 id="react-select-3-live-region"
+-                                 id="react-select-5-live-region"
+                                  className="css-1f43avz-a11yText-A11yText"
+                                >
+                            ...
+                          ...
+                            <div className="css-hlgwow">
+                              <Placeholder clearValue={function} cx={function} getStyles={function} ...>
+                                <EmotionCssPropInternal css={{label:"pla...", ...}} className="" id="react-sele..." ...>
+                                  <Insertion>
+                                  <div
+                                    className="css-1jqq78o-placeholder"
++                                   id="react-select-3-placeholder"
+-                                   id="react-select-5-placeholder"
+                                  >
++                                   Buscar departamento…
+                              <Input clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                                <EmotionCssPropInternal css={{...}} className="" data-value="" ...>
+                                  <Insertion>
+                                  <div className="css-19bb58m" data-value="">
+                                    <input
+                                      className=""
+                                      ref={function}
+                                      style={{label:"input",color:"inherit",background:0,opacity:1,width:"100%",gridArea:"1 / 2",font:"inherit", ...}}
+                                      disabled={false}
+                                      autoCapitalize="none"
+                                      autoComplete="off"
+                                      autoCorrect="off"
++                                     id="react-select-3-input"
+-                                     id="react-select-5-input"
+                                      onBlur={function}
+                                      onChange={function}
+                                      onFocus={function}
+                                      spellCheck="false"
+                                      tabIndex={0}
+                                      form={undefined}
+                                      type="text"
+                                      value=""
+                                      aria-autocomplete="list"
+                                      aria-expanded={false}
+                                      aria-haspopup={true}
+                                      aria-errormessage={undefined}
+                                      aria-invalid={undefined}
+                                      aria-label={undefined}
+                                      aria-labelledby={undefined}
+                                      aria-required={undefined}
+                                      role="combobox"
+                                      aria-activedescendant=""
++                                     aria-describedby="react-select-3-placeholder"
+-                                     aria-describedby="react-select-5-placeholder"
+                                    >
+              <div className="bg-gray-50...">
+                <label>
+                <SelectorImpuesto value="" onChange={function onChange}>
+                  <Select ref={null} options={[...]} placeholder="Buscar imp..." isClearable={true} isSearchable={true} ...>
+                    <SelectContainer clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                      <EmotionCssPropInternal css={{label:"con...", ...}} className="text-black" id={undefined} ...>
+                        <Insertion>
+                        <div className="text-black..." id={undefined} onKeyDown={function}>
+                          <LiveRegion clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                            <A11yText id="react-sele...">
+                              <EmotionCssPropInternal css={{name:"1f43...", ...}} id="react-sele..." ...>
+                                <Insertion>
+                                <span
++                                 id="react-select-5-live-region"
+-                                 id="react-select-6-live-region"
+                                  className="css-1f43avz-a11yText-A11yText"
+                                >
+                            ...
+                          ...
+                            <div className="css-hlgwow">
+                              <Placeholder clearValue={function} cx={function} getStyles={function} ...>
+                                <EmotionCssPropInternal css={{label:"pla...", ...}} className="" id="react-sele..." ...>
+                                  <Insertion>
+                                  <div
+                                    className="css-1jqq78o-placeholder"
++                                   id="react-select-5-placeholder"
+-                                   id="react-select-6-placeholder"
+                                  >
++                                   Buscar impuesto...
+                              <Input clearValue={function} cx={function} getStyles={function} getClassNames={function} ...>
+                                <EmotionCssPropInternal css={{...}} className="" data-value="" ...>
+                                  <Insertion>
+                                  <div className="css-19bb58m" data-value="">
+                                    <input
+                                      className=""
+                                      ref={function}
+                                      style={{label:"input",color:"inherit",background:0,opacity:1,width:"100%",gridArea:"1 / 2",font:"inherit", ...}}
+                                      disabled={false}
+                                      autoCapitalize="none"
+                                      autoComplete="off"
+                                      autoCorrect="off"
++                                     id="react-select-5-input"
+-                                     id="react-select-6-input"
+                                      onBlur={function}
+                                      onChange={function}
+                                      onFocus={function}
+                                      spellCheck="false"
+                                      tabIndex={0}
+                                      form={undefined}
+                                      type="text"
+                                      value=""
+                                      aria-autocomplete="list"
+                                      aria-expanded={false}
+                                      aria-haspopup={true}
+                                      aria-errormessage={undefined}
+                                      aria-invalid={undefined}
+                                      aria-label={undefined}
+                                      aria-labelledby={undefined}
+                                      aria-required={undefined}
+                                      role="combobox"
+                                      aria-activedescendant=""
++                                     aria-describedby="react-select-5-placeholder"
+-                                     aria-describedby="react-select-6-placeholder"
+                                    >
+              ...
+
+[00:29:31.765] Server  LOG     ✓ Compiled in 382ms
+[00:29:32.128] Browser ERROR   ./app/components/SelectDepto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectDepto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectDepto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:37.346] Server  LOG     ✓ Compiled in 51ms
+[00:29:38.129] Browser ERROR   ./app/components/SelectDepto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectDepto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectDepto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:38.129] Browser ERROR   ./app/components/SelectImpuesto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectImpuesto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectImpuesto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:42.541] Server  LOG     ✓ Compiled in 14ms
+[00:29:43.130] Browser ERROR   ./app/components/SelectDepto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectDepto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectDepto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:43.130] Browser ERROR   ./app/components/SelectImpuesto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectImpuesto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectImpuesto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:43.130] Browser ERROR   ./app/components/SelectMes.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |     ssr: false,
+  7 | });
+  8 | const meses = [
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectMes.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectMes.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:43.927] Server  LOG     ✓ Compiled in 10ms
+[00:29:44.129] Browser ERROR   ./app/components/SelectDepto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectDepto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectDepto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:44.129] Browser ERROR   ./app/components/SelectImpuesto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectImpuesto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectImpuesto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:44.129] Browser ERROR   ./app/components/SelectMes.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |     ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectMes.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectMes.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:46.607] Server  ERROR   ⨯ ./app/components/SelectDepto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectDepto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectDepto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+
+
+./app/components/SelectImpuesto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectImpuesto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectImpuesto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+
+
+./app/components/SelectMes.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |     ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectMes.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectMes.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+
+[00:29:46.831] Browser ERROR   uncaughtError: Error: ./app/components/SelectDepto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectDepto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectDepto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+
+[00:29:46.950] Browser ERROR   ./app/components/SelectDepto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectDepto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectDepto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:46.950] Browser ERROR   ./app/components/SelectImpuesto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectImpuesto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectImpuesto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:46.950] Browser ERROR   ./app/components/SelectMes.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |     ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectMes.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectMes.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:47.089] Browser ERROR   ./app/components/SelectDepto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectDepto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectDepto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:47.089] Browser ERROR   ./app/components/SelectImpuesto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectImpuesto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectImpuesto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:47.089] Browser ERROR   ./app/components/SelectMes.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |     ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectMes.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectMes.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:51.531] Server  ERROR   ⨯ ./app/components/SelectDepto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectDepto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectDepto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+
+
+./app/components/SelectImpuesto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectImpuesto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectImpuesto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+
+
+./app/components/SelectMes.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |     ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectMes.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectMes.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+
+[00:29:51.630] Browser ERROR   uncaughtError: Error: ./app/components/SelectDepto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectDepto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectDepto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+
+
+[00:29:51.758] Browser ERROR   ./app/components/SelectDepto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectDepto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectDepto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:51.758] Browser ERROR   ./app/components/SelectImpuesto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectImpuesto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectImpuesto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:51.758] Browser ERROR   ./app/components/SelectMes.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |     ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectMes.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectMes.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:51.860] Browser ERROR   ./app/components/SelectDepto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectDepto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectDepto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:51.860] Browser ERROR   ./app/components/SelectImpuesto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectImpuesto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectImpuesto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:29:51.860] Browser ERROR   ./app/components/SelectMes.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |     ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectMes.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectMes.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:30:31.129] Browser ERROR   ./app/components/SelectImpuesto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectImpuesto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectImpuesto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:30:31.129] Browser ERROR   ./app/components/SelectMes.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |     ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectMes.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectMes.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:30:37.129] Browser ERROR   ./app/components/SelectImpuesto.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |   ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectImpuesto.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectImpuesto.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:30:37.129] Browser ERROR   ./app/components/SelectMes.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |     ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectMes.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectMes.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:30:40.130] Browser ERROR   ./app/components/SelectMes.jsx:5:7
+Ecmascript file had an error
+  3 | import dynamic from "next/dynamic";
+  4 |
+> 5 | const Select = dynamic(() => import("react-select"), {
+    |       ^^^^^^
+  6 |     ssr: false,
+  7 | });
+  8 |
+
+the name `Select` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/components/SelectMes.jsx [Client Component Browser]
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/SelectMes.jsx [Client Component SSR]
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:30:41.928] Server  LOG     ✓ Compiled in 14ms
+[00:30:42.225] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:51.722] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'value')
+[00:30:52.752] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'value')
+[00:30:53.867] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'value')
+[00:31:19.391] Browser ERROR   unhandledRejection: ReferenceError: departamento is not defined
+[00:31:30.555] Browser ERROR   unhandledRejection: ReferenceError: departamento is not defined
+[00:32:08.305] Server  LOG     ✓ Compiled in 92ms
+[00:32:23.345] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:22.427] Server  LOG     ✓ Compiled in 79ms
+[00:36:07.895] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:37:53.683] Server  LOG     ✓ Compiled in 164ms
+[00:37:54.128] Browser ERROR   uncaughtError: ReferenceError: esMesFuturo is not defined
+[00:38:13.406] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:38:13.425] Server  LOG     ✓ Compiled in 109ms
+[00:38:13.826] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:40:46.315] Server  LOG     ✓ Compiled in 71ms
+[00:42:04.156] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'click')
+[00:42:05.502] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'click')
+[00:44:41.410] Server  LOG     ✓ Compiled in 76ms
+[00:45:22.031] Server  LOG     ✓ Compiled in 26ms
+[00:46:48.153] Server  LOG     ✓ Compiled in 56ms
+[00:48:31.728] Server  LOG     ✓ Compiled in 97ms
+[00:48:48.448] Server  LOG     ✓ Compiled in 61ms
+[00:49:10.796] Server  LOG     ✓ Compiled in 40ms
+[00:49:20.147] Server  LOG     ✓ Compiled in 52ms
+[00:51:39.851] Server  LOG     ✓ Compiled in 115ms
+[00:51:55.869] Server  LOG     ✓ Compiled in 40ms
+[00:52:06.386] Server  LOG     ✓ Compiled in 23ms
+[00:52:20.921] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:05.312] Browser ERROR   {}
+[00:53:50.229] Server  LOG     ✓ Compiled in 84ms
+[00:54:12.741] Server  LOG     ✓ Compiled in 52ms
+[00:55:12.716] Server  LOG     ✓ Compiled in 31ms
+[00:55:55.540] Server  LOG     ✓ Compiled in 26ms
+[00:56:24.363] Server  LOG     ✓ Compiled in 50ms
