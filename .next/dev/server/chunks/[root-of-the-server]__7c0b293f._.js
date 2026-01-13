@@ -216,7 +216,9 @@ async function enviarMail({ to, subject, html }) {
 
 __turbopack_context__.s([
     "POST",
-    ()=>POST
+    ()=>POST,
+    "maxDuration",
+    ()=>maxDuration
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/googleapis/build/src/index.js [app-route] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$busca_id$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/api/busca_id.js [app-route] (ecmascript)");
@@ -241,6 +243,7 @@ const MESES = [
     "Noviembre",
     "Diciembre"
 ];
+const maxDuration = 60;
 // cada año ocupa 15 filas
 const FILA_INICIAL_POR_ANIO = {
     2025: 5,

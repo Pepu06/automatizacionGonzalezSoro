@@ -20,6 +20,8 @@ const MESES = [
     "Diciembre",
 ];
 
+export const maxDuration = 60;
+
 // cada año ocupa 15 filas
 const FILA_INICIAL_POR_ANIO = {
     2025: 5,

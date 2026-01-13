@@ -60,15 +60,21 @@ export default function Home() {
         body: data,
       });
 
-      if (!res.ok) throw new Error("Error");
+      const text = await res.text();
+      console.log("STATUS:", res.status);
+      console.log("RESPUESTA BACKEND:", text);
+
+      if (!res.ok) {
+        throw new Error(text);
+      }
 
       alert("Guardado en Sheets + Drive 🚀");
 
       // 🔄 reset total
       setFormData({
-        departamento: "",
-        impuesto: "",
-        mes: "",
+        departamento: null,
+        impuesto: null,
+        mes: null,
         importe: "",
       });
 

@@ -1,2 +1,37 @@
-[00:00:00.944] Server  LOG     ✓ Ready in 729ms
-[00:00:12.019] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.255] Server  LOG     ✓ Ready in 989ms
+[00:00:04.468] Server  ERROR   ⨯ ReferenceError: Select is not defined
+[00:00:04.484] Server  ERROR   ⨯ ReferenceError: Select is not defined
+[00:00:04.823] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.921] Browser ERROR   uncaughtError: ReferenceError: Select is not defined
+[00:00:21.482] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:00:21.534] Server  LOG     ✓ Compiled in 43ms
+[00:00:21.661] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:41.887] Browser LOG     STATUS: 200
+[00:00:41.887] Browser LOG     RESPUESTA BACKEND: {"ok":true,"rango":"'EDESUR'C20"}
+[00:01:04.361] Server  LOG     ✓ Compiled in 54ms
+[00:01:04.841] Browser ERROR   ./app/page.jsx:112:33
+Parsing ecmascript source code failed
+  110 |                 </div>
+  111 |
+> 112 |                 {/* Impuesto */}}
+      |                                 ^
+  113 |           <div className="bg-gray-50 rounded-lg p-6">
+  114 |             <label className="block text-base font-normal text-gray-900 mb-3">
+  115 |               Impuesto <span className="text-red-600">*</span>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/page.jsx [Client Component Browser]
+    ./app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.jsx [Client Component SSR]
+    ./app/page.jsx [Server Component]
+[00:01:34.822] Server  LOG     ✓ Compiled in 46ms
+[00:01:40.283] Server  ERROR   Error: No se encontró el spreadsheet del departamento
+[00:01:42.879] Browser LOG     STATUS: 500
+[00:01:42.879] Browser LOG     RESPUESTA BACKEND: {"error":"Error interno","details":"No se encontró el spreadsheet del departamento"}
+[00:01:42.879] Browser ERROR   {}
+[00:01:54.831] Server  LOG     ✓ Compiled in 21ms
