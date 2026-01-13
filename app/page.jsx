@@ -7,6 +7,8 @@ import SelectorImpuesto from "@/app/components/SelectImpuesto";
 import SelectorMes from "@/app/components/SelectMes";
 
 export default function Home() {
+  const [resetKey, setResetKey] = useState(0);
+
   const [formData, setFormData] = useState({
     departamento: "",
     impuesto: "",
@@ -72,14 +74,16 @@ export default function Home() {
 
       // 🔄 reset total
       setFormData({
-        departamento: null,
-        impuesto: null,
-        mes: null,
+        departamento: "",
+        impuesto: "",
+        mes: "",
         importe: "",
       });
 
       setComprobante(null);
       setPreview(null);
+
+      setResetKey(prev => prev + 1);
 
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
@@ -103,6 +107,7 @@ export default function Home() {
               Departamento <span className="text-red-600">*</span>
             </label>
             <SelectorDepartamento
+              key={resetKey}
               value={formData.departamento}
               onChange={(v) =>
                 setFormData({ ...formData, departamento: v })
@@ -115,6 +120,7 @@ export default function Home() {
               Impuesto <span className="text-red-600">*</span>
             </label>
             <SelectorImpuesto
+              key={resetKey}
               value={formData.impuesto}
               onChange={(v) =>
                 setFormData({ ...formData, impuesto: v })
@@ -128,7 +134,9 @@ export default function Home() {
               Mes <span className="text-red-600">*</span>
             </label>
             <SelectorMes
-              value={formData.mes} onChange={(v) =>
+              key={resetKey}
+              value={formData.mes}
+              onChange={(v) =>
                 setFormData({ ...formData, mes: v })
               } />
           </div>
