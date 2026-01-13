@@ -360,7 +360,7 @@ async function POST(req) {
             }
         });
         await (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$lib$2f$mailer$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["enviarMail"])({
-            to: "pedrogonzalezsoro@gmail.com",
+            to: "mvcalvar@gmail.com",
             subject: `📎 Comprobante cargado – ${departamento} / ${impuesto}`,
             html: `
                 <h2>Nuevo comprobante cargado</h2>
