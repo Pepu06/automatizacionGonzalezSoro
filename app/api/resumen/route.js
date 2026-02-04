@@ -1,4 +1,5 @@
-import { google } from "googleapis";
+import { sheets } from "../lib/google";
+
 
 const SPREADSHEET_ID = "1usBD--9MjH-u1Eg5zCHb_TCmlb2h1SHP5uhzsdxEFqQ";
 
@@ -121,17 +122,6 @@ export async function GET(req) {
         if (!mes) {
             return Response.json({ error: "Mes requerido" }, { status: 400 });
         }
-
-        const auth = new google.auth.OAuth2(
-            process.env.GOOGLE_CLIENT_ID,
-            process.env.GOOGLE_CLIENT_SECRET
-        );
-
-        auth.setCredentials({
-            refresh_token: process.env.GOOGLE_REFRESH_TOKEN,
-        });
-
-        const sheets = google.sheets({ version: "v4", auth });
 
         // 🔹 Leemos todo el bloque de datos del mes
         const range = `${mes}!B2:K${DEPARTAMENTOS.length + 1}`;

@@ -2,6 +2,7 @@ import { google } from "googleapis";
 import { obtenerSpreadsheetId } from "../busca_id";
 import { Readable } from "stream";
 import { enviarMail } from "../lib/mailer";
+import { drive, sheets } from "../lib/google";
 
 const ROOT_FOLDER_ID = "1Sa9TRwwCzVv2bqS21AQV79yBavsyPJ-s";
 
@@ -104,18 +105,6 @@ export async function POST(req) {
 
         // 👉 escribimos en la hoja del impuesto
         const rango = `'${impuesto}'C${fila}`;
-
-        const auth = new google.auth.OAuth2(
-            process.env.GOOGLE_CLIENT_ID,
-            process.env.GOOGLE_CLIENT_SECRET
-        );
-
-        auth.setCredentials({
-            refresh_token: process.env.GOOGLE_REFRESH_TOKEN,
-        });
-
-        const drive = google.drive({ version: "v3", auth });
-        const sheets = google.sheets({ version: "v4", auth });
 
         const departamentoFolderId = await obtenerOCrearCarpeta(
             drive,
