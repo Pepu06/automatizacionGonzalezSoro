@@ -1,8 +1,7 @@
 import { google } from "googleapis";
 import { obtenerSpreadsheetId } from "../busca_id";
-import { Readable } from "stream";
 import { enviarMail } from "../lib/mailer";
-import { drive, sheets } from "../lib/google";
+import { sheets } from "../lib/google";
 
 const ROOT_FOLDER_ID = "1Sa9TRwwCzVv2bqS21AQV79yBavsyPJ-s";
 
@@ -54,32 +53,6 @@ function obtenerFila(anio, mes) {
     return filaBase + indiceMes;
 }
 
-async function obtenerOCrearCarpeta(drive, nombre, parentId) {
-    const res = await drive.files.list({
-        q: `
-      name='${nombre}'
-      and mimeType='application/vnd.google-apps.folder'
-      and '${parentId}' in parents
-      and trashed=false
-    `,
-        fields: "files(id, name)",
-    });
-
-    if (res.data.files.length > 0) {
-        return res.data.files[0].id;
-    }
-
-    const folder = await drive.files.create({
-        requestBody: {
-            name: nombre,
-            mimeType: "application/vnd.google-apps.folder",
-            parents: [parentId],
-        },
-    });
-
-    return folder.data.id;
-}
-
 export async function POST(req) {
     try {
         const formData = await req.formData();
@@ -106,36 +79,6 @@ export async function POST(req) {
         // 👉 escribimos en la hoja del impuesto
         const rango = `'${impuesto}'C${fila}`;
 
-        const departamentoFolderId = await obtenerOCrearCarpeta(
-            drive,
-            departamento,
-            ROOT_FOLDER_ID
-        );
-
-        const impuestoFolderId = await obtenerOCrearCarpeta(
-            drive,
-            impuesto,
-            departamentoFolderId
-        );
-
-        const carpetaUrl = `https://drive.google.com/drive/folders/${impuestoFolderId}`;
-
-        if (comprobante) {
-            const buffer = Buffer.from(await comprobante.arrayBuffer());
-            const stream = Readable.from(buffer);
-
-            await drive.files.create({
-                requestBody: {
-                    name: `${mes} - ${impuesto}.${comprobante.name.split(".").pop()}`,
-                    parents: [impuestoFolderId],
-                },
-                media: {
-                    mimeType: comprobante.type,
-                    body: stream,
-                },
-            });
-        }
-
         await sheets.spreadsheets.values.update({
             spreadsheetId,
             range: `'${impuesto}'!C${fila}`,
@@ -145,21 +88,33 @@ export async function POST(req) {
             },
         });
 
+        if (comprobante) {
+            const n8nFormData = new FormData();
+            n8nFormData.append("departamento", departamento);
+            n8nFormData.append("impuesto", impuesto);
+            n8nFormData.append("mes", mes);
+            n8nFormData.append("importe", importe);
+            n8nFormData.append("data0", comprobante);
+
+            const response = await fetch('https://primary-production-96028.up.railway.app/webhook/cargar-impuesto', {
+                method: 'POST',
+                body: n8nFormData,
+            });
+
+            if (!response.ok) {
+                throw new Error(`Error al enviar comprobante: ${response.status} ${response.statusText}`);
+            }
+        }
+
         await enviarMail({
             to: "mvcalvar@gmail.com",
-            subject: `📎 Comprobante cargado – ${departamento} / ${impuesto}`,
+            subject: `📎 Impuesto actualizado – ${departamento} / ${impuesto}`,
             html: `
-                <h2>Nuevo comprobante cargado</h2>
+                <h2>Impuesto actualizado en el spreadsheet</h2>
                 <p><strong>Departamento:</strong> ${departamento}</p>
                 <p><strong>Impuesto:</strong> ${impuesto}</p>
                 <p><strong>Mes:</strong> ${mes}</p>
                 <p><strong>Monto:</strong> $${importe}</p>
-
-                <p>
-                👉 <a href="${carpetaUrl}" target="_blank">
-                    Ver carpeta del impuesto en Drive
-                </a>
-                </p>
             `,
         });
 

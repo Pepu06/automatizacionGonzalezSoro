@@ -1,2 +1,14 @@
-[00:00:00.671] Server  LOG     ✓ Ready in 491ms
-[00:00:14.680] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:00.649] Server  LOG     ✓ Ready in 516ms
+[00:00:01.123] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:13.101] Server  LOG     ✓ Compiled in 450ms
+[00:03:59.328] Server  LOG     ✓ Compiled in 57ms
+[00:04:14.252] Browser LOG     STATUS: 200
+[00:04:14.252] Browser LOG     RESPUESTA BACKEND: {"ok":true,"rango":"'EDESUR'C21"}
+[00:05:13.930] Browser LOG     STATUS: 200
+[00:05:13.930] Browser LOG     RESPUESTA BACKEND: {"ok":true,"rango":"'EDESUR'C21"}
+[00:05:48.275] Browser LOG     STATUS: 200
+[00:05:48.276] Browser LOG     RESPUESTA BACKEND: {"ok":true,"rango":"'EDESUR'C21"}
+[00:06:45.040] Browser LOG     STATUS: 200
+[00:06:45.041] Browser LOG     RESPUESTA BACKEND: {"ok":true,"rango":"'EDESUR'C21"}
+[00:09:10.676] Server  LOG     ✓ Compiled in 117ms
+[00:10:21.581] Server  LOG     ✓ Compiled in 103ms
