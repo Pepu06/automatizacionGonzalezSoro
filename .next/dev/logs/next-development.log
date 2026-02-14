@@ -1,14 +1,56 @@
-[00:00:00.649] Server  LOG     ✓ Ready in 516ms
-[00:00:01.123] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:13.101] Server  LOG     ✓ Compiled in 450ms
-[00:03:59.328] Server  LOG     ✓ Compiled in 57ms
-[00:04:14.252] Browser LOG     STATUS: 200
-[00:04:14.252] Browser LOG     RESPUESTA BACKEND: {"ok":true,"rango":"'EDESUR'C21"}
-[00:05:13.930] Browser LOG     STATUS: 200
-[00:05:13.930] Browser LOG     RESPUESTA BACKEND: {"ok":true,"rango":"'EDESUR'C21"}
-[00:05:48.275] Browser LOG     STATUS: 200
-[00:05:48.276] Browser LOG     RESPUESTA BACKEND: {"ok":true,"rango":"'EDESUR'C21"}
-[00:06:45.040] Browser LOG     STATUS: 200
-[00:06:45.041] Browser LOG     RESPUESTA BACKEND: {"ok":true,"rango":"'EDESUR'C21"}
-[00:09:10.676] Server  LOG     ✓ Compiled in 117ms
-[00:10:21.581] Server  LOG     ✓ Compiled in 103ms
+[00:00:00.626] Server  LOG     ✓ Ready in 437ms
+[00:00:03.308] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:08.641] Browser LOG     🔐 Intentando login con contraseña: sanbenito2025
+[00:00:08.641] Browser LOG     📡 Enviando request a /api/auth/login
+[00:00:10.483] Server  LOG     === LOGIN ATTEMPT ===
+[00:00:10.484] Server  LOG     Password recibido: "sanbenito2025"
+[00:00:10.484] Server  LOG     📊 Leyendo Google Sheets...
+[00:00:11.107] Server  LOG     Usuarios encontrados: 82
+[00:00:11.109] Server  LOG     Primeros 3 usuarios: [[...],[...],[...]]
+[00:00:11.110] Server  LOG     Usuario encontrado: "San Benito (sanbenito2025)"
+[00:00:11.110] Server  LOG     ✅ Login exitoso para: "San Benito"
+[00:00:11.222] Browser LOG     📥 Response status: 200
+[00:00:11.222] Browser LOG     📥 Response data: {"departamento":"San Benito","success":true}
+[00:00:11.222] Browser LOG     ✅ Login exitoso, departamento: San Benito
+[00:00:11.222] Browser LOG     🔄 Redirigiendo a /
+[00:00:21.613] Server  LOG     === LOGIN ATTEMPT ===
+[00:00:21.613] Server  LOG     Password recibido: "paraguay7542025"
+[00:00:21.614] Server  LOG     📊 Leyendo Google Sheets...
+[00:00:21.705] Browser LOG     🔐 Intentando login con contraseña: paraguay7542025
+[00:00:21.705] Browser LOG     📡 Enviando request a /api/auth/login
+[00:00:22.364] Server  LOG     Usuarios encontrados: 82
+[00:00:22.365] Server  LOG     Primeros 3 usuarios: [[...],[...],[...]]
+[00:00:22.365] Server  LOG     Usuario encontrado: "Paraguay 754 (paraguay7542025)"
+[00:00:22.366] Server  LOG     ✅ Login exitoso para: "Paraguay 754"
+[00:00:22.478] Browser LOG     📥 Response status: 200
+[00:00:22.478] Browser LOG     📥 Response data: {"departamento":"Paraguay 754","success":true}
+[00:00:22.478] Browser LOG     ✅ Login exitoso, departamento: Paraguay 754
+[00:00:22.478] Browser LOG     🔄 Redirigiendo a /
+[00:00:28.877] Server  LOG     === LOGIN ATTEMPT ===
+[00:00:28.878] Server  LOG     Password recibido: "paraguay7542025"
+[00:00:28.878] Server  LOG     📊 Leyendo Google Sheets...
+[00:00:28.954] Browser LOG     🔐 Intentando login con contraseña: paraguay7542025
+[00:00:28.954] Browser LOG     📡 Enviando request a /api/auth/login
+[00:00:29.714] Server  LOG     Usuarios encontrados: 82
+[00:00:29.715] Server  LOG     Primeros 3 usuarios: [[...],[...],[...]]
+[00:00:29.715] Server  LOG     Usuario encontrado: "Paraguay 754 (paraguay7542025)"
+[00:00:29.716] Server  LOG     ✅ Login exitoso para: "Paraguay 754"
+[00:00:29.822] Browser LOG     📥 Response status: 200
+[00:00:29.822] Browser LOG     📥 Response data: {"departamento":"Paraguay 754","success":true}
+[00:00:29.822] Browser LOG     ✅ Login exitoso, departamento: Paraguay 754
+[00:00:29.822] Browser LOG     🔄 Redirigiendo a /
+[00:00:31.150] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:31.938] Browser LOG     🔐 Intentando login con contraseña: 
+[00:00:33.532] Server  LOG     === LOGIN ATTEMPT ===
+[00:00:33.532] Server  LOG     Password recibido: "paraguay7542025"
+[00:00:33.533] Server  LOG     📊 Leyendo Google Sheets...
+[00:00:33.621] Browser LOG     🔐 Intentando login con contraseña: paraguay7542025
+[00:00:33.622] Browser LOG     📡 Enviando request a /api/auth/login
+[00:00:34.059] Server  LOG     Usuarios encontrados: 82
+[00:00:34.059] Server  LOG     Primeros 3 usuarios: [[...],[...],[...]]
+[00:00:34.060] Server  LOG     Usuario encontrado: "Paraguay 754 (paraguay7542025)"
+[00:00:34.060] Server  LOG     ✅ Login exitoso para: "Paraguay 754"
+[00:00:34.166] Browser LOG     📥 Response status: 200
+[00:00:34.166] Browser LOG     📥 Response data: {"departamento":"Paraguay 754","success":true}
+[00:00:34.166] Browser LOG     ✅ Login exitoso, departamento: Paraguay 754
+[00:00:34.166] Browser LOG     🔄 Redirigiendo a /
