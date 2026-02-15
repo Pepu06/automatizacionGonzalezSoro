@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/app/context/AuthContext";
 
 export default function LoginContent() {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const router = useRouter();
+    const { login } = useAuth();
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -42,14 +44,12 @@ export default function LoginContent() {
 
             console.log("✅ Login exitoso, departamento:", data.departamento);
 
-            // Guardar sesión con el departamento que devuelve el backend
-            localStorage.setItem(
-                "user",
-                JSON.stringify({ departamento: data.departamento })
-            );
+            // Usar el método login del contexto
+            login(data.departamento);
 
             console.log("🔄 Redirigiendo a /");
             router.push("/");
+            router.refresh();
         } catch (err) {
             console.error("❌ Error en login:", err);
             setError(err.message);

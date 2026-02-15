@@ -1,18 +1,20 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useAuth } from "@/app/context/AuthContext";
 
 export default function ProtectedRoute({ children }) {
     const { user, loading } = useAuth();
     const router = useRouter();
+    const pathname = usePathname();
 
     useEffect(() => {
-        if (!loading && !user) {
+        if (!loading && !user && pathname !== "/login") {
+            console.log("🚫 No hay usuario, redirigiendo a /login");
             router.push("/login");
         }
-    }, [user, loading, router]);
+    }, [user, loading, router, pathname]);
 
     if (loading) {
         return (
@@ -25,7 +27,7 @@ export default function ProtectedRoute({ children }) {
         );
     }
 
-    if (!user) {
+    if (!user && pathname !== "/login") {
         return null;
     }
 
