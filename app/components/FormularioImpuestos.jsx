@@ -5,9 +5,10 @@ import { useAuth } from "@/app/context/AuthContext";
 import SelectorDepartamento from "@/app/components/SelectDepto";
 import SelectorImpuesto from "@/app/components/SelectImpuesto";
 import SelectorMes from "@/app/components/SelectMes";
+import CambiarPassword from "@/app/components/CambiarPassword";
 
 export default function FormularioImpuestos() {
-    const { user, logout } = useAuth();
+    const { user, logout, isAdmin } = useAuth();
     const [resetKey, setResetKey] = useState(0);
 
     const [formData, setFormData] = useState({
@@ -22,18 +23,40 @@ export default function FormularioImpuestos() {
     const [preview, setPreview] = useState(null);
     const [dragging, setDragging] = useState(false);
     const fileInputRef = useRef(null);
-
     const [loading, setLoading] = useState(false);
 
-    // Pre-cargar departamento del usuario
+    // Pre-cargar departamento para usuarios normales
     useEffect(() => {
-        if (user?.departamento) {
+        if (user?.departamento && !isAdmin()) {
             setFormData((prev) => ({
                 ...prev,
                 departamento: user.departamento,
             }));
         }
-    }, [user]);
+    }, [user, isAdmin]);
+
+    // Obtener mes actual
+    const getMesActual = () => {
+        const meses = [
+            "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+            "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
+        ];
+        return meses[new Date().getMonth()];
+    };
+
+    // Validar que usuarios normales no puedan cargar meses futuros
+    const validarMes = (mes) => {
+        if (isAdmin()) return true; // Admin puede cargar cualquier mes
+
+        const meses = [
+            "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+            "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
+        ];
+        const mesActualIndex = new Date().getMonth();
+        const mesSeleccionadoIndex = meses.indexOf(mes);
+
+        return mesSeleccionadoIndex <= mesActualIndex;
+    };
 
     const procesarArchivo = (file) => {
         if (!file) return;
@@ -66,6 +89,20 @@ export default function FormularioImpuestos() {
         e.preventDefault();
         setLoading(true);
 
+        // Validación de archivo obligatorio para usuarios normales
+        if (!isAdmin() && !comprobante) {
+            alert("❌ Debes adjuntar un comprobante para cargar el impuesto");
+            setLoading(false);
+            return;
+        }
+
+        // Validación de mes futuro
+        if (!validarMes(formData.mes)) {
+            alert("❌ No podés cargar impuestos de meses futuros");
+            setLoading(false);
+            return;
+        }
+
         const data = new FormData();
         data.append("departamento", formData.departamento);
         data.append("impuesto", formData.impuesto);
@@ -93,7 +130,7 @@ export default function FormularioImpuestos() {
             alert("✅ Guardado exitosamente en Sheets + Drive");
 
             setFormData({
-                departamento: user?.departamento || "",
+                departamento: isAdmin() ? "" : user?.departamento || "",
                 impuesto: "",
                 mes: "",
                 importe: "",
@@ -116,6 +153,7 @@ export default function FormularioImpuestos() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+            <CambiarPassword />
             {/* Botón de logout */}
             <button
                 onClick={logout}
@@ -123,6 +161,11 @@ export default function FormularioImpuestos() {
             >
                 <span className="text-sm">
                     <strong>{user?.departamento}</strong>
+                    {isAdmin() && (
+                        <span className="ml-2 px-2 py-0.5 bg-blue-100 text-blue-700 text-xs rounded-md">
+                            Admin
+                        </span>
+                    )}
                 </span>
                 <div className="w-px h-5 bg-gray-300"></div>
                 <svg
@@ -181,16 +224,22 @@ export default function FormularioImpuestos() {
                                         <label className="block text-sm font-semibold text-gray-700 mb-3">
                                             Departamento <span className="text-red-500">*</span>
                                         </label>
-                                        <div className="relative">
+                                        {isAdmin() ? (
                                             <SelectorDepartamento
                                                 key={resetKey}
                                                 value={formData.departamento}
                                                 onChange={(v) =>
                                                     setFormData({ ...formData, departamento: v })
                                                 }
-                                                disabled={true}
                                             />
-                                        </div>
+                                        ) : (
+                                            <input
+                                                type="text"
+                                                value={formData.departamento}
+                                                disabled
+                                                className="w-full px-4 py-3.5 bg-gray-100 border border-gray-200 rounded-xl text-gray-700 cursor-not-allowed"
+                                            />
+                                        )}
                                     </div>
 
                                     {/* Impuesto */}
@@ -214,6 +263,11 @@ export default function FormularioImpuestos() {
                                     <div>
                                         <label className="block text-sm font-semibold text-gray-700 mb-3">
                                             Mes <span className="text-red-500">*</span>
+                                            {!isAdmin() && (
+                                                <span className="text-xs text-gray-500 ml-2">
+                                                    (hasta {getMesActual()})
+                                                </span>
+                                            )}
                                         </label>
                                         <SelectorMes
                                             key={resetKey}
@@ -255,7 +309,8 @@ export default function FormularioImpuestos() {
                                     </div>
                                     <div className="relative flex justify-center">
                                         <span className="px-4 text-sm text-gray-500 bg-white">
-                                            Comprobante (opcional)
+                                            Comprobante {!isAdmin() && <span className="text-red-500">*</span>}
+                                            {isAdmin() && " (opcional)"}
                                         </span>
                                     </div>
                                 </div>
@@ -383,7 +438,9 @@ export default function FormularioImpuestos() {
                                             className={`cursor-pointer border-2 border-dashed rounded-2xl p-12 text-center transition-all duration-200
                         ${dragging
                                                     ? "border-blue-400 bg-blue-50 scale-[1.02]"
-                                                    : "border-gray-300 bg-gray-50 hover:border-gray-400 hover:bg-gray-100"
+                                                    : !isAdmin() && !comprobante
+                                                        ? "border-gray-300 bg-gray-50 hover:border-gray-400 hover:bg-gray-100 hover:scale-[1.01]"
+                                                        : "border-gray-300 bg-gray-50 hover:border-gray-400 hover:bg-gray-100 hover:scale-[1.01]"
                                                 }
                       `}
                                         >
@@ -410,6 +467,11 @@ export default function FormularioImpuestos() {
                                                     <p className="text-sm text-gray-500">
                                                         o hacé click para seleccionar
                                                     </p>
+                                                    {!isAdmin() && (
+                                                        <p className="text-xs text-red-600 font-medium mt-2">
+                                                            ⚠️ El comprobante es obligatorio
+                                                        </p>
+                                                    )}
                                                 </div>
                                                 <div className="inline-flex items-center gap-2 text-xs text-gray-400">
                                                     <span>PDF, JPG, PNG</span>

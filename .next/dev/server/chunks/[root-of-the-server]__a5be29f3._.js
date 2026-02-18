@@ -145,8 +145,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$serv
 async function POST(request) {
     try {
         const { password } = await request.json();
-        console.log("=== LOGIN ATTEMPT ===");
-        console.log("Password recibido:", password);
         if (!password) {
             return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
                 error: "Contraseña requerida"
@@ -155,7 +153,6 @@ async function POST(request) {
             });
         }
         if (!process.env.GOOGLE_SHEET_ID || !process.env.GOOGLE_CLIENT_EMAIL || !process.env.GOOGLE_PRIVATE_KEY) {
-            console.error("❌ Faltan variables de entorno");
             return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
                 error: "Configuración del servidor incompleta"
             }, {
@@ -181,25 +178,21 @@ async function POST(request) {
             auth
         });
         const spreadsheetId = process.env.GOOGLE_SHEET_ID;
-        console.log("📊 Leyendo Google Sheets...");
-        // Leer todos los usuarios (Departamento y Contraseña)
+        // Leer usuarios (Departamento, Contraseña, Rol)
         const response = await sheets.spreadsheets.values.get({
             spreadsheetId: spreadsheetId,
-            range: "usuarios!A2:B"
+            range: "usuarios!A2:C"
         });
         const usuarios = response.data.values || [];
-        console.log("Usuarios encontrados:", usuarios.length);
-        console.log("Primeros 3 usuarios:", usuarios.slice(0, 3));
         if (usuarios.length === 0) {
             return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
-                error: "No hay usuarios registrados en la hoja 'usuarios'"
+                error: "No hay usuarios registrados"
             }, {
                 status: 401
             });
         }
         // Buscar usuario por contraseña (columna B)
         const usuario = usuarios.find((row)=>row && row[1] === password);
-        console.log("Usuario encontrado:", usuario ? `${usuario[0]} (${usuario[1]})` : "NO ENCONTRADO");
         if (!usuario) {
             return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
                 error: "Contraseña incorrecta"
@@ -207,16 +200,15 @@ async function POST(request) {
                 status: 401
             });
         }
-        console.log("✅ Login exitoso para:", usuario[0]);
-        // Devolver el departamento asociado a esa contraseña
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
             success: true,
-            departamento: usuario[0]
+            departamento: usuario[0],
+            rol: usuario[2] || "user"
         });
     } catch (error) {
-        console.error("❌ Error completo en login:", error);
+        console.error("Error en login:", error);
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
-            error: `Error: ${error.message}`
+            error: "Error al iniciar sesión"
         }, {
             status: 500
         });

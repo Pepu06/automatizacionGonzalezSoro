@@ -9,7 +9,6 @@ export function AuthProvider({ children }) {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Verificar si hay sesión guardada
         const savedUser = localStorage.getItem("user");
         if (savedUser) {
             try {
@@ -21,8 +20,8 @@ export function AuthProvider({ children }) {
         setLoading(false);
     }, []);
 
-    const login = (departamento) => {
-        const userData = { departamento };
+    const login = (departamento, rol) => {
+        const userData = { departamento, rol };
         setUser(userData);
         localStorage.setItem("user", JSON.stringify(userData));
     };
@@ -32,8 +31,12 @@ export function AuthProvider({ children }) {
         localStorage.removeItem("user");
     };
 
+    const isAdmin = () => {
+        return user?.rol === "admin";
+    };
+
     return (
-        <AuthContext.Provider value={{ user, login, logout, loading }}>
+        <AuthContext.Provider value={{ user, login, logout, loading, isAdmin }}>
             {children}
         </AuthContext.Provider>
     );

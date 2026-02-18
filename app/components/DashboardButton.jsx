@@ -1,8 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { useAuth } from "@/app/context/AuthContext";
 
 export default function DashboardButton() {
+  const { isAdmin } = useAuth();
+
+  // Solo mostrar para admins
+  if (!isAdmin()) return null;
+
   return (
     <Link
       href="/dashboard"
