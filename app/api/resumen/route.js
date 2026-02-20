@@ -3,6 +3,8 @@ import { sheets } from "../lib/google";
 
 const SPREADSHEET_ID = "1usBD--9MjH-u1Eg5zCHb_TCmlb2h1SHP5uhzsdxEFqQ";
 
+const SPREADSHEET_ID_USUARIOS = "1_73Gaqjt60-AXQq4mOowoOv5JA3ExiRQceIw6CwWgQ8";
+
 const DEPARTAMENTOS = [
     "Acevedo",
     "Alsina 1138",
@@ -101,6 +103,15 @@ const IMPUESTOS = [
     "ARBA",
 ];
 
+const normalizarDepartamento = (valor) =>
+    (valor || "")
+        .toString()
+        .normalize("NFD")
+        .replace(/\p{Diacritic}/gu, "")
+        .replace(/\s+/g, " ")
+        .trim()
+        .toLowerCase();
+
 const COLUMNA_POR_IMPUESTO = {
     ABL: "B",
     ABLUC: "C",
@@ -152,7 +163,31 @@ export async function GET(req) {
             });
         });
 
-        return Response.json({ data });
+        let emails = {};
+
+        try {
+            const usuariosRes = await sheets.spreadsheets.values.get({
+                spreadsheetId: SPREADSHEET_ID_USUARIOS,
+                range: "usuarios!A2:D",
+            });
+
+            const usuarios = usuariosRes.data.values || [];
+
+            usuarios.forEach((row) => {
+                const departamento = row?.[0];
+                const email = row?.[3];
+
+                if (departamento && email) {
+                    emails[normalizarDepartamento(departamento)] = email;
+                }
+            });
+
+        } catch (error) {
+            console.warn("No se pudieron cargar los emails:", error?.message);
+            // No tiramos error. Seguimos.
+        }
+
+        return Response.json({ data, emails });
     } catch (err) {
         console.error(err);
         return Response.json(

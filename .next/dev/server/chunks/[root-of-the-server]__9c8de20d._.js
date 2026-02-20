@@ -171,6 +171,7 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$lib$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/api/lib/google.js [app-route] (ecmascript)");
 ;
 const SPREADSHEET_ID = "1usBD--9MjH-u1Eg5zCHb_TCmlb2h1SHP5uhzsdxEFqQ";
+const SPREADSHEET_ID_USUARIOS = "1_73Gaqjt60-AXQq4mOowoOv5JA3ExiRQceIw6CwWgQ8";
 const DEPARTAMENTOS = [
     "Acevedo",
     "Alsina 1138",
@@ -267,6 +268,7 @@ const IMPUESTOS = [
     "MUNICIPAL",
     "ARBA"
 ];
+const normalizarDepartamento = (valor)=>(valor || "").toString().normalize("NFD").replace(/\p{Diacritic}/gu, "").replace(/\s+/g, " ").trim().toLowerCase();
 const COLUMNA_POR_IMPUESTO = {
     ABL: "B",
     ABLUC: "C",
@@ -309,8 +311,27 @@ async function GET(req) {
                 };
             });
         });
+        let emails = {};
+        try {
+            const usuariosRes = await __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$lib$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["sheets"].spreadsheets.values.get({
+                spreadsheetId: SPREADSHEET_ID_USUARIOS,
+                range: "usuarios!A2:D"
+            });
+            const usuarios = usuariosRes.data.values || [];
+            usuarios.forEach((row)=>{
+                const departamento = row?.[0];
+                const email = row?.[3];
+                if (departamento && email) {
+                    emails[normalizarDepartamento(departamento)] = email;
+                }
+            });
+        } catch (error) {
+            console.warn("No se pudieron cargar los emails:", error?.message);
+        // No tiramos error. Seguimos.
+        }
         return Response.json({
-            data
+            data,
+            emails
         });
     } catch (err) {
         console.error(err);

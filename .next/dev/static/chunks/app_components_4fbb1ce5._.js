@@ -906,9 +906,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$SelectD
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$SelectImpuesto$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/components/SelectImpuesto.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$SelectMes$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/components/SelectMes.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$CambiarPassword$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/components/CambiarPassword.jsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -1067,8 +1069,39 @@ function FormularioImpuestos() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$CambiarPassword$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                lineNumber: 156,
+                lineNumber: 157,
                 columnNumber: 13
+            }, this),
+            isAdmin() && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                href: "/deudas",
+                className: "fixed bottom-6 left-6 z-50 flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-6 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-200 font-semibold transform hover:scale-105",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                        className: "w-5 h-5",
+                        fill: "none",
+                        stroke: "currentColor",
+                        viewBox: "0 0 24 24",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round",
+                            strokeWidth: 2,
+                            d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        }, void 0, false, {
+                            fileName: "[project]/app/components/FormularioImpuestos.jsx",
+                            lineNumber: 169,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/FormularioImpuestos.jsx",
+                        lineNumber: 163,
+                        columnNumber: 21
+                    }, this),
+                    "Ver Deudores"
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/components/FormularioImpuestos.jsx",
+                lineNumber: 159,
+                columnNumber: 17
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: logout,
@@ -1081,7 +1114,7 @@ function FormularioImpuestos() {
                                 children: user?.departamento
                             }, void 0, false, {
                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                lineNumber: 163,
+                                lineNumber: 185,
                                 columnNumber: 21
                             }, this),
                             isAdmin() && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1089,20 +1122,20 @@ function FormularioImpuestos() {
                                 children: "Admin"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                lineNumber: 165,
+                                lineNumber: 187,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                        lineNumber: 162,
+                        lineNumber: 184,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-px h-5 bg-gray-300"
                     }, void 0, false, {
                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                        lineNumber: 170,
+                        lineNumber: 192,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -1117,19 +1150,19 @@ function FormularioImpuestos() {
                             d: "M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
                         }, void 0, false, {
                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                            lineNumber: 177,
+                            lineNumber: 199,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                        lineNumber: 171,
+                        lineNumber: 193,
                         columnNumber: 17
                     }, this),
                     "Salir"
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                lineNumber: 158,
+                lineNumber: 180,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1151,17 +1184,17 @@ function FormularioImpuestos() {
                                     d: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                    lineNumber: 197,
+                                    lineNumber: 219,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                lineNumber: 191,
+                                lineNumber: 213,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                            lineNumber: 190,
+                            lineNumber: 212,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -1169,7 +1202,7 @@ function FormularioImpuestos() {
                             children: "Gestión de Impuestos"
                         }, void 0, false, {
                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                            lineNumber: 205,
+                            lineNumber: 227,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1177,18 +1210,18 @@ function FormularioImpuestos() {
                             children: "Cargá los impuestos de manera simple y organizada"
                         }, void 0, false, {
                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                            lineNumber: 208,
+                            lineNumber: 230,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                    lineNumber: 189,
+                    lineNumber: 211,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                lineNumber: 188,
+                lineNumber: 210,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1218,13 +1251,13 @@ function FormularioImpuestos() {
                                                                     children: "*"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 225,
+                                                                    lineNumber: 247,
                                                                     columnNumber: 58
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 224,
+                                                            lineNumber: 246,
                                                             columnNumber: 41
                                                         }, this),
                                                         isAdmin() ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$SelectDepto$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1235,7 +1268,7 @@ function FormularioImpuestos() {
                                                                 })
                                                         }, resetKey, false, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 228,
+                                                            lineNumber: 250,
                                                             columnNumber: 45
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                             type: "text",
@@ -1244,13 +1277,13 @@ function FormularioImpuestos() {
                                                             className: "w-full px-4 py-3.5 bg-gray-100 border border-gray-200 rounded-xl text-gray-700 cursor-not-allowed"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 236,
+                                                            lineNumber: 258,
                                                             columnNumber: 45
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                    lineNumber: 223,
+                                                    lineNumber: 245,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1264,13 +1297,13 @@ function FormularioImpuestos() {
                                                                     children: "*"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 248,
+                                                                    lineNumber: 270,
                                                                     columnNumber: 54
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 247,
+                                                            lineNumber: 269,
                                                             columnNumber: 41
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$SelectImpuesto$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1281,19 +1314,19 @@ function FormularioImpuestos() {
                                                                 })
                                                         }, resetKey, false, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 250,
+                                                            lineNumber: 272,
                                                             columnNumber: 41
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                    lineNumber: 246,
+                                                    lineNumber: 268,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                            lineNumber: 221,
+                                            lineNumber: 243,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1310,7 +1343,7 @@ function FormularioImpuestos() {
                                                                     children: "*"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 265,
+                                                                    lineNumber: 287,
                                                                     columnNumber: 49
                                                                 }, this),
                                                                 !isAdmin() && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1322,13 +1355,13 @@ function FormularioImpuestos() {
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 267,
+                                                                    lineNumber: 289,
                                                                     columnNumber: 49
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 264,
+                                                            lineNumber: 286,
                                                             columnNumber: 41
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$SelectMes$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1339,13 +1372,13 @@ function FormularioImpuestos() {
                                                                 })
                                                         }, resetKey, false, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 272,
+                                                            lineNumber: 294,
                                                             columnNumber: 41
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                    lineNumber: 263,
+                                                    lineNumber: 285,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1359,13 +1392,13 @@ function FormularioImpuestos() {
                                                                     children: "*"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 282,
+                                                                    lineNumber: 304,
                                                                     columnNumber: 59
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 281,
+                                                            lineNumber: 303,
                                                             columnNumber: 41
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1376,7 +1409,7 @@ function FormularioImpuestos() {
                                                                     children: "$"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 285,
+                                                                    lineNumber: 307,
                                                                     columnNumber: 45
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1391,13 +1424,13 @@ function FormularioImpuestos() {
                                                                     className: "w-full pl-8 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 288,
+                                                                    lineNumber: 310,
                                                                     columnNumber: 45
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 284,
+                                                            lineNumber: 306,
                                                             columnNumber: 41
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1405,19 +1438,19 @@ function FormularioImpuestos() {
                                                             children: "Incluí centavos si corresponde (ej: 1250.75)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 299,
+                                                            lineNumber: 321,
                                                             columnNumber: 41
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                    lineNumber: 280,
+                                                    lineNumber: 302,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                            lineNumber: 261,
+                                            lineNumber: 283,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1429,12 +1462,12 @@ function FormularioImpuestos() {
                                                         className: "w-full border-t border-gray-200"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                        lineNumber: 308,
+                                                        lineNumber: 330,
                                                         columnNumber: 41
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                    lineNumber: 307,
+                                                    lineNumber: 329,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1448,25 +1481,25 @@ function FormularioImpuestos() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                lineNumber: 312,
+                                                                lineNumber: 334,
                                                                 columnNumber: 72
                                                             }, this),
                                                             isAdmin() && " (opcional)"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                        lineNumber: 311,
+                                                        lineNumber: 333,
                                                         columnNumber: 41
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                    lineNumber: 310,
+                                                    lineNumber: 332,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                            lineNumber: 306,
+                                            lineNumber: 328,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1479,7 +1512,7 @@ function FormularioImpuestos() {
                                                     onChange: (e)=>procesarArchivo(e.target.files?.[0])
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                    lineNumber: 320,
+                                                    lineNumber: 342,
                                                     columnNumber: 37
                                                 }, this),
                                                 preview ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1494,7 +1527,7 @@ function FormularioImpuestos() {
                                                                     title: "Vista previa PDF"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 332,
+                                                                    lineNumber: 354,
                                                                     columnNumber: 53
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1516,28 +1549,28 @@ function FormularioImpuestos() {
                                                                                 d: "M6 18L18 6M6 6l12 12"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                                lineNumber: 350,
+                                                                                lineNumber: 372,
                                                                                 columnNumber: 65
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                            lineNumber: 344,
+                                                                            lineNumber: 366,
                                                                             columnNumber: 61
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                        lineNumber: 338,
+                                                                        lineNumber: 360,
                                                                         columnNumber: 57
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 337,
+                                                                    lineNumber: 359,
                                                                     columnNumber: 53
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 331,
+                                                            lineNumber: 353,
                                                             columnNumber: 49
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "relative border-2 border-green-300 rounded-2xl overflow-hidden bg-gray-50 p-4",
@@ -1548,7 +1581,7 @@ function FormularioImpuestos() {
                                                                     className: "w-full h-auto max-h-96 object-contain rounded-xl"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 362,
+                                                                    lineNumber: 384,
                                                                     columnNumber: 53
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1570,28 +1603,28 @@ function FormularioImpuestos() {
                                                                                 d: "M6 18L18 6M6 6l12 12"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                                lineNumber: 380,
+                                                                                lineNumber: 402,
                                                                                 columnNumber: 65
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                            lineNumber: 374,
+                                                                            lineNumber: 396,
                                                                             columnNumber: 61
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                        lineNumber: 368,
+                                                                        lineNumber: 390,
                                                                         columnNumber: 57
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 367,
+                                                                    lineNumber: 389,
                                                                     columnNumber: 53
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 361,
+                                                            lineNumber: 383,
                                                             columnNumber: 49
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1612,17 +1645,17 @@ function FormularioImpuestos() {
                                                                                     clipRule: "evenodd"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                                    lineNumber: 400,
+                                                                                    lineNumber: 422,
                                                                                     columnNumber: 61
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                                lineNumber: 395,
+                                                                                lineNumber: 417,
                                                                                 columnNumber: 57
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                            lineNumber: 394,
+                                                                            lineNumber: 416,
                                                                             columnNumber: 53
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1632,7 +1665,7 @@ function FormularioImpuestos() {
                                                                                     children: comprobante?.name
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                                    lineNumber: 408,
+                                                                                    lineNumber: 430,
                                                                                     columnNumber: 57
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1643,19 +1676,19 @@ function FormularioImpuestos() {
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                                    lineNumber: 411,
+                                                                                    lineNumber: 433,
                                                                                     columnNumber: 57
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                            lineNumber: 407,
+                                                                            lineNumber: 429,
                                                                             columnNumber: 53
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 393,
+                                                                    lineNumber: 415,
                                                                     columnNumber: 49
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1665,19 +1698,19 @@ function FormularioImpuestos() {
                                                                     children: "Cambiar"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 416,
+                                                                    lineNumber: 438,
                                                                     columnNumber: 49
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 392,
+                                                            lineNumber: 414,
                                                             columnNumber: 45
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                    lineNumber: 329,
+                                                    lineNumber: 351,
                                                     columnNumber: 41
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     onClick: ()=>fileInputRef.current?.click(),
@@ -1711,17 +1744,17 @@ function FormularioImpuestos() {
                                                                         d: "M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                        lineNumber: 455,
+                                                                        lineNumber: 477,
                                                                         columnNumber: 57
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 449,
+                                                                    lineNumber: 471,
                                                                     columnNumber: 53
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                lineNumber: 448,
+                                                                lineNumber: 470,
                                                                 columnNumber: 49
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1731,7 +1764,7 @@ function FormularioImpuestos() {
                                                                         children: "Arrastrá tu archivo aquí"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                        lineNumber: 464,
+                                                                        lineNumber: 486,
                                                                         columnNumber: 53
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1739,7 +1772,7 @@ function FormularioImpuestos() {
                                                                         children: "o hacé click para seleccionar"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                        lineNumber: 467,
+                                                                        lineNumber: 489,
                                                                         columnNumber: 53
                                                                     }, this),
                                                                     !isAdmin() && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1747,13 +1780,13 @@ function FormularioImpuestos() {
                                                                         children: "⚠️ El comprobante es obligatorio"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                        lineNumber: 471,
+                                                                        lineNumber: 493,
                                                                         columnNumber: 57
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                lineNumber: 463,
+                                                                lineNumber: 485,
                                                                 columnNumber: 49
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1763,44 +1796,44 @@ function FormularioImpuestos() {
                                                                         children: "PDF, JPG, PNG"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                        lineNumber: 477,
+                                                                        lineNumber: 499,
                                                                         columnNumber: 53
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                         children: "•"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                        lineNumber: 478,
+                                                                        lineNumber: 500,
                                                                         columnNumber: 53
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                         children: "Máx. 1 MB"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                        lineNumber: 479,
+                                                                        lineNumber: 501,
                                                                         columnNumber: 53
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                lineNumber: 476,
+                                                                lineNumber: 498,
                                                                 columnNumber: 49
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                        lineNumber: 447,
+                                                        lineNumber: 469,
                                                         columnNumber: 45
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                    lineNumber: 426,
+                                                    lineNumber: 448,
                                                     columnNumber: 41
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                            lineNumber: 319,
+                                            lineNumber: 341,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1829,7 +1862,7 @@ function FormularioImpuestos() {
                                                                     strokeWidth: "4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 506,
+                                                                    lineNumber: 528,
                                                                     columnNumber: 53
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1838,46 +1871,46 @@ function FormularioImpuestos() {
                                                                     d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                                    lineNumber: 514,
+                                                                    lineNumber: 536,
                                                                     columnNumber: 53
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                            lineNumber: 500,
+                                                            lineNumber: 522,
                                                             columnNumber: 49
                                                         }, this),
                                                         "Guardando..."
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                    lineNumber: 499,
+                                                    lineNumber: 521,
                                                     columnNumber: 45
                                                 }, this) : "Cargar Impuesto"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                                lineNumber: 488,
+                                                lineNumber: 510,
                                                 columnNumber: 37
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                            lineNumber: 487,
+                                            lineNumber: 509,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                    lineNumber: 219,
+                                    lineNumber: 241,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                lineNumber: 218,
+                                lineNumber: 240,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                            lineNumber: 217,
+                            lineNumber: 239,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1887,29 +1920,29 @@ function FormularioImpuestos() {
                                 children: "Los datos se guardan automáticamente en Google Sheets"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                                lineNumber: 533,
+                                lineNumber: 555,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                            lineNumber: 532,
+                            lineNumber: 554,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                    lineNumber: 216,
+                    lineNumber: 238,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/components/FormularioImpuestos.jsx",
-                lineNumber: 215,
+                lineNumber: 237,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/FormularioImpuestos.jsx",
-        lineNumber: 155,
+        lineNumber: 156,
         columnNumber: 9
     }, this);
 }

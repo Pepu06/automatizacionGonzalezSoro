@@ -6,6 +6,7 @@ import SelectorDepartamento from "@/app/components/SelectDepto";
 import SelectorImpuesto from "@/app/components/SelectImpuesto";
 import SelectorMes from "@/app/components/SelectMes";
 import CambiarPassword from "@/app/components/CambiarPassword";
+import Link from "next/link";
 
 export default function FormularioImpuestos() {
     const { user, logout, isAdmin } = useAuth();
@@ -154,6 +155,27 @@ export default function FormularioImpuestos() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
             <CambiarPassword />
+            {isAdmin() && (
+                <Link
+                    href="/deudas"
+                    className="fixed bottom-6 left-6 z-50 flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-6 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-200 font-semibold transform hover:scale-105"
+                >
+                    <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                    </svg>
+                    Ver Deudores
+                </Link>
+            )}
             {/* Botón de logout */}
             <button
                 onClick={logout}
