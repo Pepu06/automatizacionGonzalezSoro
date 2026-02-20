@@ -88,7 +88,10 @@ export async function POST(req) {
             },
         });
 
+        let n8nResult = null; // 👈 Declaramos la variable aquí
+
         if (comprobante) {
+            console.log("Enviando comprobante a n8n...");
             const n8nFormData = new FormData();
             n8nFormData.append("departamento", departamento);
             n8nFormData.append("impuesto", impuesto);
@@ -96,14 +99,19 @@ export async function POST(req) {
             n8nFormData.append("importe", importe);
             n8nFormData.append("data0", comprobante);
 
-            const response = await fetch('https://primary-production-96028.up.railway.app/webhook/cargar-impuesto', {
+            // URL DE PRODUCCIÓN (sin el -test)
+            const n8nResponse = await fetch('https://primary-production-96028.up.railway.app/webhook/cargar-impuesto', {
                 method: 'POST',
                 body: n8nFormData,
             });
 
-            if (!response.ok) {
-                throw new Error(`Error al enviar comprobante: ${response.status} ${response.statusText}`);
+            if (!n8nResponse.ok) {
+                const errorText = await n8nResponse.text();
+                throw new Error(`n8n error: ${n8nResponse.status} - ${errorText}`);
             }
+
+            n8nResult = await n8nResponse.json(); // 👈 Ahora sí guardamos la respuesta
+            console.log("Confirmación de n8n:", n8nResult);
         }
 
         await enviarMail({
@@ -118,7 +126,7 @@ export async function POST(req) {
             `,
         });
 
-        return Response.json({ ok: true, rango });
+        return Response.json({ ok: true, rango, n8n: n8nResult });
     } catch (err) {
         console.error(err);
         return Response.json(
