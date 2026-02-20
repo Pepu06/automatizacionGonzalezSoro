@@ -51,21 +51,21 @@ export async function POST(req) {
             return transporter.sendMail({
                 from: '"Gestión de Impuestos" <' + process.env.GMAIL_USER + ">",
                 to: deudor.email,
-                subject: `Recordatorio de pagos pendientes - ${deudor.departamento}`,
+                subject: `Recordatorio de comprobante pendiente - ${deudor.departamento}`,
                 html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #dc2626;">Recordatorio de Pagos Pendientes</h2>
+            <h2 style="color: #dc2626;">Recordatorio de Envío de Comprobante</h2>
             <p>Hola <strong>${deudor.nombre}</strong>,</p>
-            <p>Te informamos que tenés los siguientes impuestos pendientes correspondientes a tu departamento <strong>${deudor.departamento}</strong>:</p>
+            <p>Te informamos que falta enviar el comprobante de pago de los siguientes impuestos correspondientes a tu departamento <strong>${deudor.departamento}</strong>:</p>
             
             <div style="background-color: #fef2f2; border-left: 4px solid #dc2626; padding: 15px; margin: 20px 0;">
-              <h3 style="margin-top: 0; color: #991b1b;">Impuestos pendientes (${deudor.deudas.length}):</h3>
+              <h3 style="margin-top: 0; color: #991b1b;">Comprobantes pendientes (${deudor.deudas.length}):</h3>
               <ul style="color: #7f1d1d;">
                 ${listaDeudas}
               </ul>
             </div>
             
-            <p>Por favor, realizá el pago a la brevedad para evitar recargos.</p>
+            <p>Por favor, enviá el comprobante a la brevedad para evitar recargos.</p>
             <br>
             <p>Saludos,</p>
             <p><strong>Administración</strong></p>
