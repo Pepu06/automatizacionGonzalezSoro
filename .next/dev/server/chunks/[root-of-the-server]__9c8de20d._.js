@@ -245,6 +245,7 @@ const DEPARTAMENTOS = [
     "San Benito",
     "San Juan",
     "Santa Fe 2545",
+    "Scalabrini Ortiz 2364",
     "Siria 5 A",
     "Siria 7 27",
     "Talcahuano 1242",

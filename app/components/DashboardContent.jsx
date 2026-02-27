@@ -207,11 +207,11 @@ export default function Dashboard() {
                         </div>
                     ) : resumen && Object.keys(resumen.data || {}).length > 0 ? (
                         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-                            <div className="overflow-x-auto">
+                            <div className="overflow-x-auto max-h-[600px] overflow-y-auto">
                                 <table className="w-full">
-                                    <thead className="bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+                                    <thead className="bg-gradient-to-r from-gray-900 to-gray-800 text-white sticky top-0 z-20">
                                         <tr>
-                                            <th className="px-6 py-5 text-left font-bold text-base sticky left-0 bg-gray-900 z-10">
+                                            <th className="px-6 py-5 text-left font-bold text-base sticky left-0 bg-gray-900 z-30">
                                                 Departamento
                                             </th>
                                             {IMPUESTOS.map((impuesto) => (

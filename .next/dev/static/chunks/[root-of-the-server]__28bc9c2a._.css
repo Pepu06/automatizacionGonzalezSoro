@@ -537,6 +537,10 @@
     inset: calc(var(--spacing) * 0);
   }
 
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+
   .top-1\/2 {
     top: 50%;
   }
@@ -583,6 +587,14 @@
 
   .z-10 {
     z-index: 10;
+  }
+
+  .z-20 {
+    z-index: 20;
+  }
+
+  .z-30 {
+    z-index: 30;
   }
 
   .z-50 {
@@ -707,6 +719,10 @@
 
   .max-h-96 {
     max-height: calc(var(--spacing) * 96);
+  }
+
+  .max-h-\[600px\] {
+    max-height: 600px;
   }
 
   .min-h-screen {
