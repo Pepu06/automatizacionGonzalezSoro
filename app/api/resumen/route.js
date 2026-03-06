@@ -113,6 +113,14 @@ const normalizarDepartamento = (valor) =>
         .trim()
         .toLowerCase();
 
+const DEPARTAMENTO_CANONICO_POR_NOMBRE_NORMALIZADO = DEPARTAMENTOS.reduce(
+    (acc, depto) => {
+        acc[normalizarDepartamento(depto)] = depto;
+        return acc;
+    },
+    {}
+);
+
 const COLUMNA_POR_IMPUESTO = {
     ABL: "B",
     ABLUC: "C",
@@ -135,8 +143,8 @@ export async function GET(req) {
             return Response.json({ error: "Mes requerido" }, { status: 400 });
         }
 
-        // 🔹 Leemos todo el bloque de datos del mes
-        const range = `${mes}!B2:K${DEPARTAMENTOS.length + 1}`;
+        // 🔹 Leemos departamento (columna A) + impuestos (B:K)
+        const range = `${mes}!A2:K`;
 
         const res = await sheets.spreadsheets.values.get({
             spreadsheetId: SPREADSHEET_ID,
@@ -147,17 +155,31 @@ export async function GET(req) {
 
         const data = {};
 
-        DEPARTAMENTOS.forEach((depto, rowIdx) => {
+        // Inicializamos todos los departamentos esperados en 0
+        DEPARTAMENTOS.forEach((depto) => {
             data[depto] = {};
+            IMPUESTOS.forEach((imp) => {
+                data[depto][imp] = { pagado: false, monto: 0 };
+            });
+        });
+
+        // Completamos valores leyendo el nombre real de departamento desde columna A
+        values.forEach((row) => {
+            const nombreHoja = row?.[0];
+            const deptoNormalizado = normalizarDepartamento(nombreHoja);
+            const deptoCanonico = DEPARTAMENTO_CANONICO_POR_NOMBRE_NORMALIZADO[deptoNormalizado];
+
+            if (!deptoCanonico) return;
 
             IMPUESTOS.forEach((imp, colIdx) => {
-                const raw = values[rowIdx]?.[colIdx];
+                // +1 porque la col 0 es el nombre del departamento
+                const raw = row?.[colIdx + 1];
                 const monto =
                     typeof raw === "string"
                         ? Number(raw.replace(/\./g, "").replace(",", ".").replace("ARS", "").trim())
                         : Number(raw) || 0;
 
-                data[depto][imp] = {
+                data[deptoCanonico][imp] = {
                     pagado: monto > 0,
                     monto,
                 };
