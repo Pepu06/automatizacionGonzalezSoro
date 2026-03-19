@@ -1,350 +1,368 @@
 module.exports = [
-"[externals]/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js [external] (next/dist/compiled/next-server/app-route-turbo.runtime.dev.js, cjs)", ((__turbopack_context__, module, exports) => {
+    "[externals]/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js [external] (next/dist/compiled/next-server/app-route-turbo.runtime.dev.js, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("next/dist/compiled/next-server/app-route-turbo.runtime.dev.js", () => require("next/dist/compiled/next-server/app-route-turbo.runtime.dev.js"));
+        const mod = __turbopack_context__.x("next/dist/compiled/next-server/app-route-turbo.runtime.dev.js", () => require("next/dist/compiled/next-server/app-route-turbo.runtime.dev.js"));
 
-module.exports = mod;
-}),
-"[externals]/next/dist/compiled/@opentelemetry/api [external] (next/dist/compiled/@opentelemetry/api, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/next/dist/compiled/@opentelemetry/api [external] (next/dist/compiled/@opentelemetry/api, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("next/dist/compiled/@opentelemetry/api", () => require("next/dist/compiled/@opentelemetry/api"));
+        const mod = __turbopack_context__.x("next/dist/compiled/@opentelemetry/api", () => require("next/dist/compiled/@opentelemetry/api"));
 
-module.exports = mod;
-}),
-"[externals]/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js [external] (next/dist/compiled/next-server/app-page-turbo.runtime.dev.js, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js [external] (next/dist/compiled/next-server/app-page-turbo.runtime.dev.js, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("next/dist/compiled/next-server/app-page-turbo.runtime.dev.js", () => require("next/dist/compiled/next-server/app-page-turbo.runtime.dev.js"));
+        const mod = __turbopack_context__.x("next/dist/compiled/next-server/app-page-turbo.runtime.dev.js", () => require("next/dist/compiled/next-server/app-page-turbo.runtime.dev.js"));
 
-module.exports = mod;
-}),
-"[externals]/next/dist/server/app-render/work-unit-async-storage.external.js [external] (next/dist/server/app-render/work-unit-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/next/dist/server/app-render/work-unit-async-storage.external.js [external] (next/dist/server/app-render/work-unit-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("next/dist/server/app-render/work-unit-async-storage.external.js", () => require("next/dist/server/app-render/work-unit-async-storage.external.js"));
+        const mod = __turbopack_context__.x("next/dist/server/app-render/work-unit-async-storage.external.js", () => require("next/dist/server/app-render/work-unit-async-storage.external.js"));
 
-module.exports = mod;
-}),
-"[externals]/next/dist/server/app-render/work-async-storage.external.js [external] (next/dist/server/app-render/work-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/next/dist/server/app-render/work-async-storage.external.js [external] (next/dist/server/app-render/work-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("next/dist/server/app-render/work-async-storage.external.js", () => require("next/dist/server/app-render/work-async-storage.external.js"));
+        const mod = __turbopack_context__.x("next/dist/server/app-render/work-async-storage.external.js", () => require("next/dist/server/app-render/work-async-storage.external.js"));
 
-module.exports = mod;
-}),
-"[externals]/next/dist/shared/lib/no-fallback-error.external.js [external] (next/dist/shared/lib/no-fallback-error.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/next/dist/shared/lib/no-fallback-error.external.js [external] (next/dist/shared/lib/no-fallback-error.external.js, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("next/dist/shared/lib/no-fallback-error.external.js", () => require("next/dist/shared/lib/no-fallback-error.external.js"));
+        const mod = __turbopack_context__.x("next/dist/shared/lib/no-fallback-error.external.js", () => require("next/dist/shared/lib/no-fallback-error.external.js"));
 
-module.exports = mod;
-}),
-"[externals]/child_process [external] (child_process, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/child_process [external] (child_process, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("child_process", () => require("child_process"));
+        const mod = __turbopack_context__.x("child_process", () => require("child_process"));
 
-module.exports = mod;
-}),
-"[externals]/fs [external] (fs, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/fs [external] (fs, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("fs", () => require("fs"));
+        const mod = __turbopack_context__.x("fs", () => require("fs"));
 
-module.exports = mod;
-}),
-"[externals]/https [external] (https, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/https [external] (https, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("https", () => require("https"));
+        const mod = __turbopack_context__.x("https", () => require("https"));
 
-module.exports = mod;
-}),
-"[externals]/stream [external] (stream, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/stream [external] (stream, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("stream", () => require("stream"));
+        const mod = __turbopack_context__.x("stream", () => require("stream"));
 
-module.exports = mod;
-}),
-"[externals]/os [external] (os, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/os [external] (os, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("os", () => require("os"));
+        const mod = __turbopack_context__.x("os", () => require("os"));
 
-module.exports = mod;
-}),
-"[externals]/events [external] (events, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/events [external] (events, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("events", () => require("events"));
+        const mod = __turbopack_context__.x("events", () => require("events"));
 
-module.exports = mod;
-}),
-"[externals]/process [external] (process, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/process [external] (process, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("process", () => require("process"));
+        const mod = __turbopack_context__.x("process", () => require("process"));
 
-module.exports = mod;
-}),
-"[externals]/util [external] (util, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/util [external] (util, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("util", () => require("util"));
+        const mod = __turbopack_context__.x("util", () => require("util"));
 
-module.exports = mod;
-}),
-"[externals]/path [external] (path, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/path [external] (path, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("path", () => require("path"));
+        const mod = __turbopack_context__.x("path", () => require("path"));
 
-module.exports = mod;
-}),
-"[externals]/crypto [external] (crypto, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/crypto [external] (crypto, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("crypto", () => require("crypto"));
+        const mod = __turbopack_context__.x("crypto", () => require("crypto"));
 
-module.exports = mod;
-}),
-"[externals]/querystring [external] (querystring, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/querystring [external] (querystring, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("querystring", () => require("querystring"));
+        const mod = __turbopack_context__.x("querystring", () => require("querystring"));
 
-module.exports = mod;
-}),
-"[externals]/buffer [external] (buffer, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/buffer [external] (buffer, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("buffer", () => require("buffer"));
+        const mod = __turbopack_context__.x("buffer", () => require("buffer"));
 
-module.exports = mod;
-}),
-"[externals]/http2 [external] (http2, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/http2 [external] (http2, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("http2", () => require("http2"));
+        const mod = __turbopack_context__.x("http2", () => require("http2"));
 
-module.exports = mod;
-}),
-"[externals]/zlib [external] (zlib, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/zlib [external] (zlib, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("zlib", () => require("zlib"));
+        const mod = __turbopack_context__.x("zlib", () => require("zlib"));
 
-module.exports = mod;
-}),
-"[externals]/url [external] (url, cjs)", ((__turbopack_context__, module, exports) => {
+        module.exports = mod;
+    }),
+    "[externals]/url [external] (url, cjs)", ((__turbopack_context__, module, exports) => {
 
-const mod = __turbopack_context__.x("url", () => require("url"));
+        const mod = __turbopack_context__.x("url", () => require("url"));
 
-module.exports = mod;
-}),
-"[project]/app/api/lib/google.js [app-route] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
+        module.exports = mod;
+    }),
+    "[project]/app/api/lib/google.js [app-route] (ecmascript)", ((__turbopack_context__) => {
+        "use strict";
 
-__turbopack_context__.s([
-    "drive",
-    ()=>drive,
-    "gmail",
-    ()=>gmail,
-    "sheets",
-    ()=>sheets
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/googleapis/build/src/index.js [app-route] (ecmascript)");
-;
-const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
-const auth = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["google"].auth.JWT({
-    email: credentials.client_email,
-    key: credentials.private_key,
-    scopes: [
-        "https://www.googleapis.com/auth/drive",
-        "https://www.googleapis.com/auth/spreadsheets",
-        "https://www.googleapis.com/auth/gmail.send"
-    ]
-});
-const drive = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["google"].drive({
-    version: "v3",
-    auth
-});
-const sheets = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["google"].sheets({
-    version: "v4",
-    auth
-});
-const gmail = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["google"].gmail({
-    version: "v1",
-    auth
-});
-}),
-"[project]/app/api/resumen/route.js [app-route] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
-
-__turbopack_context__.s([
-    "GET",
-    ()=>GET
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$lib$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/api/lib/google.js [app-route] (ecmascript)");
-;
-const SPREADSHEET_ID = "1usBD--9MjH-u1Eg5zCHb_TCmlb2h1SHP5uhzsdxEFqQ";
-const SPREADSHEET_ID_USUARIOS = "1_73Gaqjt60-AXQq4mOowoOv5JA3ExiRQceIw6CwWgQ8";
-const DEPARTAMENTOS = [
-    "Acevedo",
-    "Alsina 1138",
-    "Alsina 1905",
-    "Araoz",
-    "Artigas",
-    "Austria",
-    "Av la Plata",
-    "Avellaneda",
-    "Ayacucho 1085",
-    "Ayacucho 331",
-    "Bernardo de Irigoy",
-    "Berutti",
-    "Billinghurst",
-    "Bulnes",
-    "Cervantes",
-    "Charcas",
-    "Cramer",
-    "Don Bosco",
-    "El Potrero",
-    "Esmeralda 3 K",
-    "Esmeralda 5 A",
-    "Esmeralda 5 D",
-    "Eva Peron",
-    "Formosa 129",
-    "Formosa 380",
-    "G Lorca cochera 340",
-    "G Lorca cochera 97",
-    "G Lorca piso 22",
-    "G Lorca piso 3",
-    "H Irigoyen",
-    "Independencia",
-    "La Rioja",
-    "Lacarra",
-    "Laprida 1898",
-    "Las Heras",
-    "Lavalle",
-    "Lavalleja",
-    "Libertad 844",
-    "Libertad 960",
-    "M T de Alvear",
-    "Mar de las Pampas",
-    "Mario Bravo 5 A",
-    "Matheu 1 A",
-    "Matheu 2 G",
-    "Matheu 4 E",
-    "Ortega y Gasset",
-    "Paraguay 754",
-    "Paraguay 783",
-    "Pilar dormi",
-    "Pueyrredon 1655",
-    "Pueyrredon 1978",
-    "Quirno Costa",
-    "R Pena 10 C",
-    "R Pena 10 D",
-    "R Pena 2 B",
-    "R Pena 2 C",
-    "R Pena 2 D",
-    "R Pena 3 D",
-    "R Pena 4 C",
-    "R Pena 4 D",
-    "Ravignani",
-    "Rawson",
-    "Riobamba",
-    "Rivadavia 1525",
-    "Rivadavia 1611",
-    "Rivadavia 4085",
-    "Rivadavia 822",
-    "Saavedra 2",
-    "Saavedra PB",
-    "San Benito",
-    "San Juan",
-    "Santa Fe 2545",
-    "Scalabrini Ortiz 2364",
-    "Siria 5 A",
-    "Siria 7 27",
-    "Talcahuano 1242",
-    "Uruguay 14 D",
-    "Uruguay 7 B",
-    "Valle",
-    "Vidt 2052",
-    "Vidt 2137",
-    "Yapeyu",
-    "Yatay"
-];
-const IMPUESTOS = [
-    "EDESUR",
-    "AYSA",
-    "METROGAS",
-    "ABL",
-    "EXPENSAS",
-    "TELECOM",
-    "AYSAUC",
-    "ABLUC",
-    "MUNICIPAL",
-    "ARBA"
-];
-const normalizarDepartamento = (valor)=>(valor || "").toString().normalize("NFD").replace(/\p{Diacritic}/gu, "").replace(/\s+/g, " ").trim().toLowerCase();
-const COLUMNA_POR_IMPUESTO = {
-    ABL: "B",
-    ABLUC: "C",
-    ARBA: "D",
-    AYSA: "E",
-    AYSAUC: "F",
-    EDESUR: "G",
-    EXPENSAS: "H",
-    METROGAS: "I",
-    MUNICIPAL: "J",
-    TELECOM: "K"
-};
-async function GET(req) {
-    try {
-        const { searchParams } = new URL(req.url);
-        const mes = searchParams.get("mes");
-        if (!mes) {
-            return Response.json({
-                error: "Mes requerido"
-            }, {
-                status: 400
-            });
-        }
-        // 🔹 Leemos todo el bloque de datos del mes
-        const range = `${mes}!B2:K${DEPARTAMENTOS.length + 1}`;
-        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$lib$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["sheets"].spreadsheets.values.get({
-            spreadsheetId: SPREADSHEET_ID,
-            range
+        __turbopack_context__.s([
+            "drive",
+            () => drive,
+            "gmail",
+            () => gmail,
+            "sheets",
+            () => sheets
+        ]);
+        var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/googleapis/build/src/index.js [app-route] (ecmascript)");
+        ;
+        const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
+        const auth = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["google"].auth.JWT({
+            email: credentials.client_email,
+            key: credentials.private_key,
+            scopes: [
+                "https://www.googleapis.com/auth/drive",
+                "https://www.googleapis.com/auth/spreadsheets",
+                "https://www.googleapis.com/auth/gmail.send"
+            ]
         });
-        const values = res.data.values || [];
-        const data = {};
-        DEPARTAMENTOS.forEach((depto, rowIdx)=>{
-            data[depto] = {};
-            IMPUESTOS.forEach((imp, colIdx)=>{
-                const raw = values[rowIdx]?.[colIdx];
-                const monto = typeof raw === "string" ? Number(raw.replace(/\./g, "").replace(",", ".").replace("ARS", "").trim()) : Number(raw) || 0;
-                data[depto][imp] = {
-                    pagado: monto > 0,
-                    monto
-                };
-            });
+        const drive = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["google"].drive({
+            version: "v3",
+            auth
         });
-        let emails = {};
-        try {
-            const usuariosRes = await __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$lib$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["sheets"].spreadsheets.values.get({
-                spreadsheetId: SPREADSHEET_ID_USUARIOS,
-                range: "usuarios!A2:D"
-            });
-            const usuarios = usuariosRes.data.values || [];
-            usuarios.forEach((row)=>{
-                const departamento = row?.[0];
-                const email = row?.[3];
-                if (departamento && email) {
-                    emails[normalizarDepartamento(departamento)] = email;
+        const sheets = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["google"].sheets({
+            version: "v4",
+            auth
+        });
+        const gmail = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$googleapis$2f$build$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["google"].gmail({
+            version: "v1",
+            auth
+        });
+    }),
+    "[project]/app/api/resumen/route.js [app-route] (ecmascript)", ((__turbopack_context__) => {
+        "use strict";
+
+        __turbopack_context__.s([
+            "GET",
+            () => GET
+        ]);
+        var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$lib$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/api/lib/google.js [app-route] (ecmascript)");
+        ;
+        const SPREADSHEET_ID = "1usBD--9MjH-u1Eg5zCHb_TCmlb2h1SHP5uhzsdxEFqQ";
+        const SPREADSHEET_ID_USUARIOS = "1_73Gaqjt60-AXQq4mOowoOv5JA3ExiRQceIw6CwWgQ8";
+        const DEPARTAMENTOS = [
+            "Acevedo",
+            "Alsina 1138",
+            "Alsina 1905",
+            "Araoz",
+            "Artigas",
+            "Austria",
+            "Av la Plata",
+            "Avellaneda",
+            "Ayacucho 1085",
+            "Ayacucho 331",
+            "Bernardo de Irigoyen",
+            "Beruti",
+            "Billinghurst",
+            "Bulnes",
+            "Cervantes",
+            "Charcas",
+            "Cramer",
+            "Don Bosco",
+            "El Potrero",
+            "Esmeralda 3 K",
+            "Esmeralda 5 A",
+            "Esmeralda 5 D",
+            "Eva Peron",
+            "Formosa 129",
+            "Formosa 380",
+            "G Lorca cochera 340",
+            "G Lorca cochera 97",
+            "G Lorca piso 22",
+            "G Lorca piso 3",
+            "H Irigoyen",
+            "Independencia",
+            "La Rioja",
+            "Lacarra",
+            "Lapida 1898",
+            "Las Heras",
+            "Lavalle",
+            "Lavalleja",
+            "Libertad 844",
+            "Libertad 960",
+            "M T de Alvear",
+            "Mar de las Pampas",
+            "Mario Bravo 5 A",
+            "Matheu 1 A",
+            "Matheu 2 G",
+            "Matheu 4 E",
+            "Ortega y Gasset",
+            "Paraguay 754",
+            "Paraguay 783",
+            "Pilar dormi",
+            "Pueyrredon 1655",
+            "Pueyrredon 1978",
+            "Quimo Costa",
+            "R Pena 10 C",
+            "R Pena 10 D",
+            "R Pena 2 B",
+            "R Pena 2 C",
+            "R Pena 2 D",
+            "R Pena 3 D",
+            "R Pena 4 C",
+            "R Pena 4 D",
+            "Ravignani",
+            "Rawson",
+            "Riobamba",
+            "Rivadavia 1525",
+            "Rivadavia 1611",
+            "Rivadavia 4085",
+            "Rivadavia 822",
+            "Saavedra 2",
+            "Saavedra PB",
+            "San Benito",
+            "San Juan",
+            "Santa Fe 2545",
+            "Scalabrini Ortiz 2364",
+            "Siria 5 A",
+            "Siria 7 27",
+            "Talcahuano 1242",
+            "Uruguay 14 D",
+            "Uruguay 7 B",
+            "Valle",
+            "Vidt 2052",
+            "Vidt 2137",
+            "Yapeyu",
+            "Yatay"
+        ];
+        const IMPUESTOS = [
+            "EDESUR",
+            "AYSA",
+            "METROGAS",
+            "ABL",
+            "EXPENSAS",
+            "TELECOM",
+            "AYSAUC",
+            "ABLUC",
+            "MUNICIPAL",
+            "ARBA"
+        ];
+        // --- CAMBIO 1: Normalización más agresiva (quita espacios y puntos) ---
+        const normalizarDepartamento = (valor) => (valor || "").toString().normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase().replace(/[^a-z0-9]/g, "") // Elimina espacios, guiones y cualquier símbolo
+            .trim();
+        // Creamos el mapa con la nueva normalización
+        const DEPARTAMENTO_CANONICO_POR_NOMBRE_NORMALIZADO = DEPARTAMENTOS.reduce((acc, depto) => {
+            acc[normalizarDepartamento(depto)] = depto;
+            return acc;
+        }, {});
+        async function GET(req) {
+            try {
+                const { searchParams } = new URL(req.url);
+                const mes = searchParams.get("mes");
+                if (!mes) {
+                    return Response.json({
+                        error: "Mes requerido"
+                    }, {
+                        status: 400
+                    });
                 }
-            });
-        } catch (error) {
-            console.warn("No se pudieron cargar los emails:", error?.message);
-        // No tiramos error. Seguimos.
+                const range = `${mes}!A2:K`;
+                const res = await __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$lib$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["sheets"].spreadsheets.values.get({
+                    spreadsheetId: SPREADSHEET_ID,
+                    range
+                });
+                const values = res.data.values || [];
+                const data = {};
+                DEPARTAMENTOS.forEach((depto) => {
+                    data[depto] = {};
+                    IMPUESTOS.forEach((imp) => {
+                        data[depto][imp] = {
+                            pagado: false,
+                            monto: 0
+                        };
+                    });
+                });
+                values.forEach((row) => {
+                    const nombreHoja = row?.[0];
+                    const deptoNormalizado = normalizarDepartamento(nombreHoja);
+                    const deptoCanonico = DEPARTAMENTO_CANONICO_POR_NOMBRE_NORMALIZADO[deptoNormalizado];
+                    if (!deptoCanonico && nombreHoja) {
+                        console.log("⚠️ ERROR DE COINCIDENCIA:");
+                        console.log(`- Leído en la hoja: "${nombreHoja}"`);
+                        console.log(`- Normalizado como: "${deptoNormalizado}"`);
+                        console.log(`- ¿Existe en tu lista?: No`);
+                        console.log("-----------------------------------");
+                    }
+                    // Si no lo encuentra, lo salteamos (puedes poner un console.log aquí para debug)
+                    if (!deptoCanonico) return;
+                    IMPUESTOS.forEach((imp, colIdx) => {
+                        const raw = row?.[colIdx + 1];
+                        // --- CAMBIO 2: Limpieza de monto más robusta ---
+                        let monto = 0;
+                        if (raw !== undefined && raw !== null && raw !== "") {
+                            monto = typeof raw === "string" ? Number(raw.replace(/\./g, "").replace(",", ".").replace(/[^\d.-]/g, "").trim()) : Number(raw) || 0;
+                        }
+                        data[deptoCanonico][imp] = {
+                            pagado: monto > 0,
+                            monto
+                        };
+                    });
+                });
+                let emails = {};
+                try {
+                    const usuariosRes = await __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$lib$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["sheets"].spreadsheets.values.get({
+                        spreadsheetId: SPREADSHEET_ID_USUARIOS,
+                        range: "usuarios!A2:D"
+                    });
+                    const usuarios = usuariosRes.data.values || [];
+                    usuarios.forEach((row) => {
+                        const departamento = row?.[0];
+                        const email = row?.[3];
+                        if (departamento && email) {
+                            // Usamos la misma normalización para los emails
+                            emails[normalizarDepartamento(departamento)] = email;
+                        }
+                    });
+                } catch (error) {
+                    console.warn("No se pudieron cargar los emails:", error?.message);
+                }
+                return Response.json({
+                    data,
+                    emails
+                });
+            } catch (err) {
+                console.error(err);
+                return Response.json({
+                    error: "Error cargando resumen",
+                    details: err.message
+                }, {
+                    status: 500
+                });
+            }
         }
-        return Response.json({
-            data,
-            emails
-        });
-    } catch (err) {
-        console.error(err);
-        return Response.json({
-            error: "Error cargando resumen",
-            details: err.message
-        }, {
-            status: 500
-        });
-    }
-}
-}),
+    }),
 ];
 
 //# sourceMappingURL=%5Broot-of-the-server%5D__9c8de20d._.js.map
