@@ -6,7 +6,7 @@ const SPREADSHEET_ID_USUARIOS = "1_73Gaqjt60-AXQq4mOowoOv5JA3ExiRQceIw6CwWgQ8";
 const DEPARTAMENTOS = [
     "Acevedo", "Alsina 1138", "Alsina 1905", "Araoz", "Artigas", "Austria",
     "Av la Plata", "Avellaneda", "Ayacucho 1085", "Ayacucho 331",
-    "Bernardo de Irigoyen", "Beruti", "Billinghurst", "Bulnes", "Cervantes",
+    "Bernardo de Irigoyen", "Berutti", "Billinghurst", "Bulnes", "Cervantes",
     "Charcas", "Cramer", "Don Bosco", "El Potrero", "Esmeralda 3 K",
     "Esmeralda 5 A", "Esmeralda 5 D", "Eva Peron", "Formosa 129",
     "Formosa 380", "G Lorca cochera 340", "G Lorca cochera 97",
