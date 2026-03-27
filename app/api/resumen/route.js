@@ -3,27 +3,26 @@ import { sheets } from "../lib/google";
 const SPREADSHEET_ID = "1usBD--9MjH-u1Eg5zCHb_TCmlb2h1SHP5uhzsdxEFqQ";
 const SPREADSHEET_ID_USUARIOS = "1_73Gaqjt60-AXQq4mOowoOv5JA3ExiRQceIw6CwWgQ8";
 
-const DEPARTAMENTOS = [
-    "Acevedo", "Alsina 1138", "Alsina 1905", "Araoz", "Artigas", "Austria",
-    "Av la Plata", "Avellaneda", "Ayacucho 1085", "Ayacucho 331",
-    "Bernardo de Irigoyen", "Beruti", "Billinghurst", "Bulnes", "Cervantes",
-    "Charcas", "Cramer", "Don Bosco", "El Potrero", "Esmeralda 3 K",
-    "Esmeralda 5 A", "Esmeralda 5 D", "Eva Peron", "Formosa 129",
-    "Formosa 380", "G Lorca cochera 340", "G Lorca cochera 97",
-    "G Lorca piso 22", "G Lorca piso 3", "H Irigoyen", "Independencia",
-    "La Rioja", "Lacarra", "Lapida 1898", "Las Heras", "Lavalle",
-    "Lavalleja", "Libertad 844", "Libertad 960", "M T de Alvear",
-    "Mar de las Pampas", "Mario Bravo 5 A", "Matheu 1 A", "Matheu 2 G",
-    "Matheu 4 E", "Ortega y Gasset", "Paraguay 754", "Paraguay 783",
-    "Pilar dormi", "Pueyrredon 1655", "Pueyrredon 1978", "Quimo Costa",
-    "R Pena 10 C", "R Pena 10 D", "R Pena 2 B", "R Pena 2 C",
-    "R Pena 2 D", "R Pena 3 D", "R Pena 4 C", "R Pena 4 D", "Ravignani",
-    "Rawson", "Riobamba", "Rivadavia 1525", "Rivadavia 1611",
-    "Rivadavia 4085", "Rivadavia 822", "Saavedra 2", "Saavedra PB",
-    "San Benito", "San Juan", "Santa Fe 2545", "Scalabrini Ortiz 2364",
-    "Siria 5 A", "Siria 7 27", "Talcahuano 1242", "Uruguay 14 D",
-    "Uruguay 7 B", "Valle", "Vidt 2052", "Vidt 2137", "Yapeyu", "Yatay",
-];
+async function obtenerDepartamentos() {
+    try {
+        const response = await sheets.spreadsheets.values.get({
+            spreadsheetId: SPREADSHEET_ID_USUARIOS,
+            range: "usuarios!A2:A",
+        });
+
+        const rows = response.data.values || [];
+        const departamentos = [...new Set(
+            rows
+                .map(row => row[0])
+                .filter(depto => depto && depto.trim() !== "")
+        )].sort();
+
+        return departamentos;
+    } catch (error) {
+        console.error("Error al obtener departamentos:", error);
+        return [];
+    }
+}
 
 const IMPUESTOS = [
     "EDESUR", "AYSA", "METROGAS", "ABL", "EXPENSAS", "TELECOM",
@@ -41,13 +40,15 @@ const normalizarDepartamento = (valor) =>
         .trim();
 
 // Creamos el mapa con la nueva normalización
-const DEPARTAMENTO_CANONICO_POR_NOMBRE_NORMALIZADO = DEPARTAMENTOS.reduce(
-    (acc, depto) => {
-        acc[normalizarDepartamento(depto)] = depto;
-        return acc;
-    },
-    {}
-);
+const crearMapaDepartamentos = (departamentos) => {
+    return departamentos.reduce(
+        (acc, depto) => {
+            acc[normalizarDepartamento(depto)] = depto;
+            return acc;
+        },
+        {}
+    );
+};
 
 export async function GET(req) {
     try {
@@ -57,6 +58,10 @@ export async function GET(req) {
         if (!mes) {
             return Response.json({ error: "Mes requerido" }, { status: 400 });
         }
+
+        // Obtener departamentos dinámicamente
+        const DEPARTAMENTOS = await obtenerDepartamentos();
+        const DEPARTAMENTO_CANONICO_POR_NOMBRE_NORMALIZADO = crearMapaDepartamentos(DEPARTAMENTOS);
 
         const range = `${mes}!A2:K`;
         const res = await sheets.spreadsheets.values.get({

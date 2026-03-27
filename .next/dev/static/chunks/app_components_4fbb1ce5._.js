@@ -94,8 +94,11 @@ __turbopack_context__.s([
     ()=>SelectorDepartamento
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/shared/lib/app-dynamic.js [app-client] (ecmascript)");
 ;
+;
+var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
@@ -108,110 +111,77 @@ const Select = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$
     ssr: false
 });
 _c = Select;
-const departamentos = [
-    "Acevedo",
-    "Alsina 1138",
-    "Alsina 1905",
-    "Araoz",
-    "Artigas",
-    "Austria",
-    "Av la Plata",
-    "Avellaneda",
-    "Ayacucho 1085",
-    "Ayacucho 331",
-    "Bernardo de Irigoy",
-    "Berutti",
-    "Billinghurst",
-    "Bulnes",
-    "Cervantes",
-    "Charcas",
-    "Cramer",
-    "Don Bosco",
-    "El Potrero",
-    "Esmeralda 3 K",
-    "Esmeralda 5 A",
-    "Esmeralda 5 D",
-    "Eva Peron",
-    "Formosa 129",
-    "Formosa 380",
-    "G Lorca cochera 340",
-    "G Lorca cochera 97",
-    "G Lorca piso 22",
-    "G Lorca piso 3",
-    "H Irigoyen",
-    "Independencia",
-    "La Rioja",
-    "Lacarra",
-    "Laprida 1898",
-    "Las Heras",
-    "Lavalle",
-    "Lavalleja",
-    "Libertad 844",
-    "Libertad 960",
-    "M T de Alvear",
-    "Mar de las Pampas",
-    "Mario Bravo 5 A",
-    "Matheu 1 A",
-    "Matheu 2 G",
-    "Matheu 4 E",
-    "Ortega y Gasset",
-    "Paraguay 754",
-    "Paraguay 783",
-    "Pilar dormi",
-    "Pueyrredon 1655",
-    "Pueyrredon 1978",
-    "Quirno Costa",
-    "R Pena 10 C",
-    "R Pena 10 D",
-    "R Pena 2 B",
-    "R Pena 2 C",
-    "R Pena 2 D",
-    "R Pena 3 D",
-    "R Pena 4 C",
-    "R Pena 4 D",
-    "Ravignani",
-    "Rawson",
-    "Riobamba",
-    "Rivadavia 1525",
-    "Rivadavia 1611",
-    "Rivadavia 4085",
-    "Rivadavia 822",
-    "Saavedra 2",
-    "Saavedra PB",
-    "San Benito",
-    "San Juan",
-    "Santa Fe 2545",
-    "Scalabrini Ortiz 2364",
-    "Siria 5 A",
-    "Siria 7 27",
-    "Talcahuano 1242",
-    "Uruguay 14 D",
-    "Uruguay 7 B",
-    "Valle",
-    "Vidt 2052",
-    "Vidt 2137",
-    "Yapeyu",
-    "Yatay"
-];
-const opcionesDepartamentos = departamentos.map((d)=>({
-        value: d,
-        label: d
-    }));
 function SelectorDepartamento({ value, onChange }) {
+    _s();
+    const [departamentos, setDepartamentos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "SelectorDepartamento.useEffect": ()=>{
+            const cargarDepartamentos = {
+                "SelectorDepartamento.useEffect.cargarDepartamentos": async ()=>{
+                    try {
+                        setLoading(true);
+                        const response = await fetch("/api/departamentos");
+                        const data = await response.json();
+                        if (data.success) {
+                            setDepartamentos(data.departamentos);
+                        } else {
+                            setError(data.error || "Error al cargar departamentos");
+                        }
+                    } catch (err) {
+                        console.error("Error al cargar departamentos:", err);
+                        setError("Error de conexión");
+                    } finally{
+                        setLoading(false);
+                    }
+                }
+            }["SelectorDepartamento.useEffect.cargarDepartamentos"];
+            cargarDepartamentos();
+        }
+    }["SelectorDepartamento.useEffect"], []);
+    const opcionesDepartamentos = departamentos.map((d)=>({
+            value: d,
+            label: d
+        }));
+    if (loading) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "text-gray-400 p-2",
+            children: "Cargando departamentos..."
+        }, void 0, false, {
+            fileName: "[project]/app/components/SelectDepto.jsx",
+            lineNumber: 44,
+            columnNumber: 7
+        }, this);
+    }
+    if (error) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "text-red-400 p-2",
+            children: [
+                "Error: ",
+                error
+            ]
+        }, void 0, true, {
+            fileName: "[project]/app/components/SelectDepto.jsx",
+            lineNumber: 52,
+            columnNumber: 7
+        }, this);
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Select, {
         options: opcionesDepartamentos,
         value: opcionesDepartamentos.find((o)=>o.value === value),
-        onChange: (opt)=>onChange(opt.value),
+        onChange: (opt)=>onChange(opt?.value || ""),
         placeholder: "Buscar departamento…",
         isClearable: true,
         isSearchable: true,
         className: "text-black"
     }, void 0, false, {
         fileName: "[project]/app/components/SelectDepto.jsx",
-        lineNumber: 101,
+        lineNumber: 59,
         columnNumber: 5
     }, this);
 }
+_s(SelectorDepartamento, "Um/tX/kKqDYvfLf9l8onDBT81Rg=");
 _c1 = SelectorDepartamento;
 var _c, _c1;
 __turbopack_context__.k.register(_c, "Select");
