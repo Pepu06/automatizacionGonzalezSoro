@@ -1,9 +1,8 @@
-import { google } from "googleapis";
 import { obtenerSpreadsheetId } from "../busca_id";
 import { enviarMail } from "../lib/mailer";
 import { sheets } from "../lib/google";
+import { subirComprobanteImpuesto } from "../lib/drive-upload";
 
-const ROOT_FOLDER_ID = "1Sa9TRwwCzVv2bqS21AQV79yBavsyPJ-s";
 
 const MESES = [
     "Enero",
@@ -88,30 +87,17 @@ export async function POST(req) {
             },
         });
 
-        let n8nResult = null; // 👈 Declaramos la variable aquí
+        let driveResult = null;
 
         if (comprobante) {
-            console.log("Enviando comprobante a n8n...");
-            const n8nFormData = new FormData();
-            n8nFormData.append("departamento", departamento);
-            n8nFormData.append("impuesto", impuesto);
-            n8nFormData.append("mes", mes);
-            n8nFormData.append("importe", importe);
-            n8nFormData.append("data0", comprobante);
-
-            // URL DE PRODUCCIÓN (sin el -test)
-            const n8nResponse = await fetch('https://primary-production-96028.up.railway.app/webhook/cargar-impuesto', {
-                method: 'POST',
-                body: n8nFormData,
-            });
-
-            if (!n8nResponse.ok) {
-                const errorText = await n8nResponse.text();
-                throw new Error(`n8n error: ${n8nResponse.status} - ${errorText}`);
+            try {
+                driveResult = await subirComprobanteImpuesto({ departamento, impuesto, mes, comprobante });
+            } catch (driveErr) {
+                return Response.json(
+                    { status: "error", message: driveErr.message },
+                    { status: 400 }
+                );
             }
-
-            n8nResult = await n8nResponse.json(); // 👈 Ahora sí guardamos la respuesta
-            console.log("Confirmación de n8n:", n8nResult);
         }
 
         await enviarMail({
@@ -126,7 +112,7 @@ export async function POST(req) {
             `,
         });
 
-        return Response.json({ ok: true, rango, n8n: n8nResult });
+        return Response.json({ ok: true, rango, drive: driveResult });
     } catch (err) {
         console.error(err);
         return Response.json(
