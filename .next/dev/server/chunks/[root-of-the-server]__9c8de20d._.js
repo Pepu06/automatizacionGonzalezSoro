@@ -224,7 +224,11 @@ async function GET(req) {
         // Obtener departamentos dinámicamente
         const DEPARTAMENTOS = await obtenerDepartamentos();
         const DEPARTAMENTO_CANONICO_POR_NOMBRE_NORMALIZADO = crearMapaDepartamentos(DEPARTAMENTOS);
-        const range = `${mes}!A2:K`;
+        // DEBUG: Mostrar departamentos cargados
+        console.log("📋 Departamentos cargados de usuarios:");
+        console.log(DEPARTAMENTOS.map((d)=>`  - "${d}"`).join("\n"));
+        // Leemos hasta fila 500 para asegurar que capturamos todos los departamentos
+        const range = `${mes}!A2:K500`;
         const res = await __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$lib$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["sheets"].spreadsheets.values.get({
             spreadsheetId: SPREADSHEET_ID,
             range
@@ -240,18 +244,19 @@ async function GET(req) {
                 };
             });
         });
-        values.forEach((row)=>{
+        values.forEach((row, rowIdx)=>{
             const nombreHoja = row?.[0];
             const deptoNormalizado = normalizarDepartamento(nombreHoja);
             const deptoCanonico = DEPARTAMENTO_CANONICO_POR_NOMBRE_NORMALIZADO[deptoNormalizado];
+            // Debug: Mostrar todos los nombres leídos
+            console.log(`Fila ${rowIdx + 2}: "${nombreHoja}" → normalizado: "${deptoNormalizado}" → encontrado: ${deptoCanonico ? "✅ " + deptoCanonico : "❌"}`);
             if (!deptoCanonico && nombreHoja) {
                 console.log("⚠️ ERROR DE COINCIDENCIA:");
                 console.log(`- Leído en la hoja: "${nombreHoja}"`);
                 console.log(`- Normalizado como: "${deptoNormalizado}"`);
-                console.log(`- ¿Existe en tu lista?: No`);
                 console.log("-----------------------------------");
             }
-            // Si no lo encuentra, lo salteamos (puedes poner un console.log aquí para debug)
+            // Si no lo encuentra, lo salteamos
             if (!deptoCanonico) return;
             IMPUESTOS.forEach((imp, colIdx)=>{
                 const raw = row?.[colIdx + 1];

@@ -1,4 +1,1 @@
-[00:00:01.478] Server  LOG     ✓ Ready in 1261ms
-[00:00:04.505] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:30.127] Browser LOG     STATUS: 200
-[00:00:30.127] Browser LOG     RESPUESTA BACKEND: {"ok":true,"rango":"'MUNICIPAL'C23","drive":{"id":"19zv1PHNQaw6TJ-Dk9GGlITSA9xivfOY8","name":"MUNICIPAL - Abril - San Benito","webViewLink":"https://drive.google.com/file/d/19zv1PHNQaw6TJ-Dk9GGlITSA9xivfOY8/view?usp=drivesdk"}}
+[00:00:01.258] Server  LOG     ✓ Ready in 944ms
