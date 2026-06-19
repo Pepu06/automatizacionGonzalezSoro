@@ -37,9 +37,9 @@ const normalizarDepartamento = (valor) =>
         .toString()
         .normalize("NFD")
         .replace(/\p{Diacritic}/gu, "")
-        .replace(/\s+/g, " ")
-        .trim()
-        .toLowerCase();
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "")
+        .trim();
 
 export default function DeudasContent() {
     const { user, logout } = useAuth();
