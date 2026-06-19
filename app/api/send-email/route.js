@@ -4,11 +4,11 @@ import { enviarMail } from "../lib/mailer";
 export async function POST(req) {
     const { deudores } = await req.json();
 
-    if (!process.env.BREVO_USER || !process.env.BREVO_SMTP_KEY) {
+    if (!process.env.BREVO_API_KEY) {
         return NextResponse.json(
             {
                 error: "Faltan credenciales de email",
-                details: "Configurar BREVO_USER y BREVO_SMTP_KEY",
+                details: "Configurar BREVO_API_KEY",
             },
             { status: 500 }
         );
