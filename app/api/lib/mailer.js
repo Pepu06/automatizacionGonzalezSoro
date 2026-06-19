@@ -1,16 +1,10 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
-export const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_PASS,
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function enviarMail({ to, subject, html }) {
-  return transporter.sendMail({
-    from: `"Impuestos Bot 🤖" <${process.env.GMAIL_USER}>`,
+  return resend.emails.send({
+    from: "Impuestos Bot <onboarding@resend.dev>",
     to,
     subject,
     html,

@@ -1,26 +1,20 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 export async function POST(req) {
     const { deudores } = await req.json();
 
-    if (!process.env.GMAIL_USER || !process.env.GMAIL_PASS) {
+    if (!process.env.RESEND_API_KEY) {
         return NextResponse.json(
             {
                 error: "Faltan credenciales de email",
-                details: "Configurar GMAIL_USER y GMAIL_PASS",
+                details: "Configurar RESEND_API_KEY",
             },
             { status: 500 }
         );
     }
 
-    const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-            user: process.env.GMAIL_USER,
-            pass: process.env.GMAIL_PASS,
-        },
-    });
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     try {
         const deudoresValidos = (deudores || []).filter(
@@ -40,7 +34,6 @@ export async function POST(req) {
         }
 
         const emailPromises = deudoresValidos.map((deudor) => {
-            // Crear lista HTML de deudas
             const listaDeudas = deudor.deudas
                 .map(
                     (deuda) =>
@@ -48,8 +41,8 @@ export async function POST(req) {
                 )
                 .join("");
 
-            return transporter.sendMail({
-                from: '"Gestión de Impuestos" <' + process.env.GMAIL_USER + ">",
+            return resend.emails.send({
+                from: "Gestión de Impuestos <onboarding@resend.dev>",
                 to: deudor.email,
                 subject: `Recordatorio de comprobante pendiente - ${deudor.departamento}`,
                 html: `
@@ -57,14 +50,14 @@ export async function POST(req) {
             <h2 style="color: #dc2626;">Recordatorio de Envío de Comprobante</h2>
             <p>Hola <strong>${deudor.nombre}</strong>,</p>
             <p>Te informamos que falta enviar el comprobante de pago de los siguientes impuestos correspondientes a tu departamento <strong>${deudor.departamento}</strong>:</p>
-            
+
             <div style="background-color: #fef2f2; border-left: 4px solid #dc2626; padding: 15px; margin: 20px 0;">
               <h3 style="margin-top: 0; color: #991b1b;">Comprobantes pendientes (${deudor.deudas.length}):</h3>
               <ul style="color: #7f1d1d;">
                 ${listaDeudas}
               </ul>
             </div>
-            
+
             <p>Por favor, enviá el comprobante a la brevedad para evitar recargos.</p>
             <br>
             <p>Saludos,</p>
