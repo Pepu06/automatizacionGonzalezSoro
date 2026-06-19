@@ -1,10 +1,17 @@
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  host: "smtp-relay.brevo.com",
+  port: 587,
+  auth: {
+    user: process.env.BREVO_USER,
+    pass: process.env.BREVO_SMTP_KEY,
+  },
+});
 
 export async function enviarMail({ to, subject, html }) {
-  return resend.emails.send({
-    from: "Impuestos Bot <onboarding@resend.dev>",
+  return transporter.sendMail({
+    from: `"Gestión de Impuestos" <${process.env.BREVO_FROM_EMAIL}>`,
     to,
     subject,
     html,

@@ -1,20 +1,18 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
+import { enviarMail } from "../lib/mailer";
 
 export async function POST(req) {
     const { deudores } = await req.json();
 
-    if (!process.env.RESEND_API_KEY) {
+    if (!process.env.BREVO_USER || !process.env.BREVO_SMTP_KEY) {
         return NextResponse.json(
             {
                 error: "Faltan credenciales de email",
-                details: "Configurar RESEND_API_KEY",
+                details: "Configurar BREVO_USER y BREVO_SMTP_KEY",
             },
             { status: 500 }
         );
     }
-
-    const resend = new Resend(process.env.RESEND_API_KEY);
 
     try {
         const deudoresValidos = (deudores || []).filter(
@@ -41,8 +39,7 @@ export async function POST(req) {
                 )
                 .join("");
 
-            return resend.emails.send({
-                from: "Gestión de Impuestos <onboarding@resend.dev>",
+            return enviarMail({
                 to: deudor.email,
                 subject: `Recordatorio de comprobante pendiente - ${deudor.departamento}`,
                 html: `
