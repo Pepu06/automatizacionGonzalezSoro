@@ -1,16 +1,7 @@
 import { sheets } from "../lib/google";
-import { obtenerMapaSpreadsheetIds } from "../busca_id";
-import { normalizarDepartamento } from "../lib/normalizar";
-import { obtenerAnioDelImpuesto, obtenerFila } from "../lib/fechas";
 
+const SPREADSHEET_ID = "1usBD--9MjH-u1Eg5zCHb_TCmlb2h1SHP5uhzsdxEFqQ";
 const SPREADSHEET_ID_USUARIOS = "1_73Gaqjt60-AXQq4mOowoOv5JA3ExiRQceIw6CwWgQ8";
-
-const IMPUESTOS = [
-    "EDESUR", "AYSA", "METROGAS", "ABL", "EXPENSAS", "TELECOM",
-    "AYSAUC", "ABLUC", "MUNICIPAL", "ARBA",
-];
-
-const CONCURRENCIA = 5;
 
 async function obtenerDepartamentos() {
     try {
@@ -23,7 +14,7 @@ async function obtenerDepartamentos() {
         const departamentos = [...new Set(
             rows
                 .map(row => row[0])
-                .filter(depto => depto && depto.trim() !== "" && depto !== "Admin")
+                .filter(depto => depto && depto.trim() !== "")
         )].sort();
 
         return departamentos;
@@ -33,35 +24,31 @@ async function obtenerDepartamentos() {
     }
 }
 
-function parsearMonto(raw) {
-    if (raw === undefined || raw === null || raw === "") return 0;
-    if (typeof raw === "number") return raw;
+const IMPUESTOS = [
+    "EDESUR", "AYSA", "METROGAS", "ABL", "EXPENSAS", "TELECOM",
+    "AYSAUC", "ABLUC", "MUNICIPAL", "ARBA",
+];
 
-    const limpio = raw
+// --- CAMBIO 1: Normalización más agresiva (quita espacios y puntos) ---
+const normalizarDepartamento = (valor) =>
+    (valor || "")
         .toString()
-        .replace(/\./g, "")
-        .replace(",", ".")
-        .replace(/[^\d.-]/g, "")
+        .normalize("NFD")
+        .replace(/\p{Diacritic}/gu, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "") // Elimina espacios, guiones y cualquier símbolo
         .trim();
 
-    const numero = Number(limpio);
-    return Number.isFinite(numero) ? numero : 0;
-}
-
-// Ejecuta fn sobre items con a lo sumo `limite` tareas en simultáneo,
-// para no pasarnos de la cuota de la API de Sheets/Drive.
-async function porLotes(items, limite, fn) {
-    let indice = 0;
-    async function siguiente() {
-        while (indice < items.length) {
-            const i = indice++;
-            await fn(items[i], i);
-        }
-    }
-    await Promise.all(
-        Array.from({ length: Math.min(limite, items.length) }, siguiente)
+// Creamos el mapa con la nueva normalización
+const crearMapaDepartamentos = (departamentos) => {
+    return departamentos.reduce(
+        (acc, depto) => {
+            acc[normalizarDepartamento(depto)] = depto;
+            return acc;
+        },
+        {}
     );
-}
+};
 
 export async function GET(req) {
     try {
@@ -72,19 +59,24 @@ export async function GET(req) {
             return Response.json({ error: "Mes requerido" }, { status: 400 });
         }
 
-        const anio = obtenerAnioDelImpuesto(mes);
-        const fila = obtenerFila(anio, mes);
+        // Obtener departamentos dinámicamente
+        const DEPARTAMENTOS = await obtenerDepartamentos();
+        const DEPARTAMENTO_CANONICO_POR_NOMBRE_NORMALIZADO = crearMapaDepartamentos(DEPARTAMENTOS);
+        
+        // DEBUG: Mostrar departamentos cargados
+        console.log("📋 Departamentos cargados de usuarios:");
+        console.log(DEPARTAMENTOS.map(d => `  - "${d}"`).join("\n"));
 
-        if (!fila) {
-            return Response.json({ error: "Mes inválido" }, { status: 400 });
-        }
+        // Leemos hasta fila 500 para asegurar que capturamos todos los departamentos
+        const range = `${mes}!A2:K500`;
+        const res = await sheets.spreadsheets.values.get({
+            spreadsheetId: SPREADSHEET_ID,
+            range,
+        });
 
-        const [DEPARTAMENTOS, mapaSpreadsheetIds] = await Promise.all([
-            obtenerDepartamentos(),
-            obtenerMapaSpreadsheetIds(),
-        ]);
-
+        const values = res.data.values || [];
         const data = {};
+
         DEPARTAMENTOS.forEach((depto) => {
             data[depto] = {};
             IMPUESTOS.forEach((imp) => {
@@ -92,31 +84,40 @@ export async function GET(req) {
             });
         });
 
-        const rangos = IMPUESTOS.map((imp) => `'${imp}'!C${fila}`);
+        values.forEach((row, rowIdx) => {
+            const nombreHoja = row?.[0];
+            const deptoNormalizado = normalizarDepartamento(nombreHoja);
+            const deptoCanonico = DEPARTAMENTO_CANONICO_POR_NOMBRE_NORMALIZADO[deptoNormalizado];
 
-        await porLotes(DEPARTAMENTOS, CONCURRENCIA, async (depto) => {
-            const spreadsheetId = mapaSpreadsheetIds[normalizarDepartamento(depto)];
+            // Debug: Mostrar todos los nombres leídos
+            console.log(`Fila ${rowIdx + 2}: "${nombreHoja}" → normalizado: "${deptoNormalizado}" → encontrado: ${deptoCanonico ? "✅ " + deptoCanonico : "❌"}`);
 
-            if (!spreadsheetId) {
-                console.warn(`⚠️ No se encontró la planilla del departamento "${depto}"`);
-                return;
+            if (!deptoCanonico && nombreHoja) {
+                console.log("⚠️ ERROR DE COINCIDENCIA:");
+                console.log(`- Leído en la hoja: "${nombreHoja}"`);
+                console.log(`- Normalizado como: "${deptoNormalizado}"`);
+                console.log("-----------------------------------");
             }
 
-            try {
-                const res = await sheets.spreadsheets.values.batchGet({
-                    spreadsheetId,
-                    ranges: rangos,
-                });
+            // Si no lo encuentra, lo salteamos
+            if (!deptoCanonico) return;
 
-                (res.data.valueRanges || []).forEach((rango, idx) => {
-                    const imp = IMPUESTOS[idx];
-                    const raw = rango.values?.[0]?.[0];
-                    const monto = parsearMonto(raw);
-                    data[depto][imp] = { pagado: monto > 0, monto };
-                });
-            } catch (error) {
-                console.error(`Error leyendo la planilla de "${depto}":`, error?.message);
-            }
+            IMPUESTOS.forEach((imp, colIdx) => {
+                const raw = row?.[colIdx + 1];
+
+                // --- CAMBIO 2: Limpieza de monto más robusta ---
+                let monto = 0;
+                if (raw !== undefined && raw !== null && raw !== "") {
+                    monto = typeof raw === "string"
+                        ? Number(raw.replace(/\./g, "").replace(",", ".").replace(/[^\d.-]/g, "").trim())
+                        : Number(raw) || 0;
+                }
+
+                data[deptoCanonico][imp] = {
+                    pagado: monto > 0,
+                    monto,
+                };
+            });
         });
 
         let emails = {};
@@ -131,6 +132,7 @@ export async function GET(req) {
                 const departamento = row?.[0];
                 const email = row?.[3];
                 if (departamento && email) {
+                    // Usamos la misma normalización para los emails
                     emails[normalizarDepartamento(departamento)] = email;
                 }
             });
