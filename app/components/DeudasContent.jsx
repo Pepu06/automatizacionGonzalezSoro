@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { useAuth } from "@/app/context/AuthContext";
+import { normalizarDepartamento } from "@/app/api/lib/normalizar";
 
 const MESES = [
     "Enero",
@@ -31,15 +32,6 @@ const IMPUESTOS = [
     "MUNICIPAL",
     "TELECOM",
 ];
-
-const normalizarDepartamento = (valor) =>
-    (valor || "")
-        .toString()
-        .normalize("NFD")
-        .replace(/\p{Diacritic}/gu, "")
-        .toLowerCase()
-        .replace(/[^a-z0-9]/g, "")
-        .trim();
 
 export default function DeudasContent() {
     const { user, logout } = useAuth();
