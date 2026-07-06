@@ -2,9 +2,56 @@ import { obtenerSpreadsheetId } from "../busca_id";
 import { enviarMail } from "../lib/mailer";
 import { sheets } from "../lib/google";
 import { subirComprobanteImpuesto } from "../lib/drive-upload";
-import { obtenerAnioDelImpuesto, obtenerFila } from "../lib/fechas";
+import { actualizarMaestro } from "../lib/maestro";
+
+
+const MESES = [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre",
+];
 
 export const maxDuration = 60;
+
+// cada año ocupa 15 filas
+const FILA_INICIAL_POR_ANIO = {
+    2025: 5,
+    2026: 20,
+    2027: 35,
+    2028: 50,
+    2029: 65,
+    2030: 80,
+};
+
+function obtenerAnioDelImpuesto(mesSeleccionado) {
+    const ahora = new Date();
+    const anioActual = ahora.getFullYear();
+    const mesActual = ahora.getMonth(); // 0 = enero
+
+    const indiceMes = MESES.indexOf(mesSeleccionado);
+    if (indiceMes === -1) return null;
+
+    return indiceMes > mesActual ? anioActual - 1 : anioActual;
+}
+
+function obtenerFila(anio, mes) {
+    const filaBase = FILA_INICIAL_POR_ANIO[anio];
+    if (!filaBase) return null;
+
+    const indiceMes = MESES.indexOf(mes);
+    if (indiceMes === -1) return null;
+
+    return filaBase + indiceMes;
+}
 
 export async function POST(req) {
     try {
@@ -41,6 +88,16 @@ export async function POST(req) {
             },
         });
 
+        // 👉 reflejamos el importe en la planilla maestra (la que lee el dashboard),
+        // agregando la fila del departamento si todavía no existe en ese mes
+        let maestroResult = null;
+        try {
+            maestroResult = await actualizarMaestro({ departamento, impuesto, mes, importe });
+        } catch (maestroErr) {
+            console.error("No se pudo actualizar la planilla maestra:", maestroErr?.message);
+            maestroResult = { ok: false, error: maestroErr?.message };
+        }
+
         let driveResult = null;
 
         if (comprobante) {
@@ -66,7 +123,7 @@ export async function POST(req) {
             `,
         });
 
-        return Response.json({ ok: true, rango, drive: driveResult });
+        return Response.json({ ok: true, rango, drive: driveResult, maestro: maestroResult });
     } catch (err) {
         console.error(err);
         return Response.json(
