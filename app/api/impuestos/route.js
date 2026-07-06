@@ -2,7 +2,6 @@ import { obtenerSpreadsheetId } from "../busca_id";
 import { enviarMail } from "../lib/mailer";
 import { sheets } from "../lib/google";
 import { subirComprobanteImpuesto } from "../lib/drive-upload";
-import { actualizarMaestro } from "../lib/maestro";
 
 
 const MESES = [
@@ -88,16 +87,6 @@ export async function POST(req) {
             },
         });
 
-        // 👉 reflejamos el importe en la planilla maestra (la que lee el dashboard),
-        // agregando la fila del departamento si todavía no existe en ese mes
-        let maestroResult = null;
-        try {
-            maestroResult = await actualizarMaestro({ departamento, impuesto, mes, importe });
-        } catch (maestroErr) {
-            console.error("No se pudo actualizar la planilla maestra:", maestroErr?.message);
-            maestroResult = { ok: false, error: maestroErr?.message };
-        }
-
         let driveResult = null;
 
         if (comprobante) {
@@ -123,7 +112,7 @@ export async function POST(req) {
             `,
         });
 
-        return Response.json({ ok: true, rango, drive: driveResult, maestro: maestroResult });
+        return Response.json({ ok: true, rango, drive: driveResult });
     } catch (err) {
         console.error(err);
         return Response.json(
